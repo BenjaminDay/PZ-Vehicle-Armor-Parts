@@ -6,6 +6,6 @@ t.truckbedcover = getTexture("media/textures/Item_icoTruckBedCover.png")
 t.roofrack = getTexture("media/textures/Item_icoRoofRack.png")
 
 ContainerButtonIcons.TrailerTrunk = t.trailer
-ContainerButtonIcons.TruckBedCover = t.truckbedcover
-ContainerButtonIcons.RoofRack = t.roofrack
+ContainerButtonIcons.Storage_TruckBedCover = t.truckbedcover
+ContainerButtonIcons.Storage_RoofRack = t.roofrack
 

@@ -14,92 +14,133 @@ Vehicles.Update = Vehicles.Update or {}
 -- ============================================================================
 -- CONFIG
 -- ============================================================================
-local dmgPartMultiplier = 0.25
+local dmgPartMultiplier = 0.5
 local durabilityTiers = {
     T1 = 0.75,
     T2 = 1.0,
     T3 = 1.5,
     T4 = 2.0,
+    T5 = 2.5,
 }
 
--- list part ID's, a ModData key and part damage multipliers here
-local bullbar_Parts =
+-- list armour part IDs, their ModData key, and part damage multipliers here
+local armourParts =
 {
-    ["EngineDoor"] = {"Armour_LastHoodCondition", dmgPartMultiplier},
-    ["Engine"] = {"Armour_LastEngineCondition", dmgPartMultiplier},
-    ["HeadlightLeft"] = {"Armour_LastHLLCondition", dmgPartMultiplier/5},
-    ["HeadlightRight"] = {"Armour_LastHLRCondition", dmgPartMultiplier/5},
-    ["HoodArmour"] = {"Armour_LastHoodACondition", 1},
-}
+    Armour_Bullbar =
+    {
+        ["EngineDoor"] = {"Armour_LastHoodCondition", dmgPartMultiplier},
+        ["Engine"] = {"Armour_LastEngineCondition", dmgPartMultiplier},
+        ["HeadlightLeft"] = {"Armour_LastHLLCondition", dmgPartMultiplier / 5},
+        ["HeadlightRight"] = {"Armour_LastHLRCondition", dmgPartMultiplier / 5},
+        ["Armour_Hood"] = {"Armour_LastAHoodCondition", 1},
+    },
 
-local hoodArmour_Parts =
-{
-    ["EngineDoor"] = {"Armour_LastHoodCondition", dmgPartMultiplier},
-    ["Engine"] = {"Armour_LastEngineCondition", dmgPartMultiplier},
-}
+    Armour_Hood =
+    {
+        ["EngineDoor"] = {"Armour_LastHoodCondition", dmgPartMultiplier},
+        ["Engine"] = {"Armour_LastEngineCondition", dmgPartMultiplier},
+    },
 
-local trunkArmour_Parts =
-{
-    ["TrunkDoor"] = {"Armour_LastTrunkDoorCondition", dmgPartMultiplier},
-    ["Trunk"] = {"Armour_LastTrunkCondition", dmgPartMultiplier},
-}
+    Armour_Trunk =
+    {
+        ["TrunkDoor"] = {"Armour_LastTrunkDCondition", dmgPartMultiplier},
+        ["Trunk"] = {"Armour_LastTrunkCondition", dmgPartMultiplier},
+    },
 
-local windshieldArmour_Parts =
-{
-    ["Windshield"] = {"Armour_LastWindshieldCondition", dmgPartMultiplier},
-}
+    Armour_Windshield =
+    {
+        ["Windshield"] = {"Armour_LastWCondition", dmgPartMultiplier},
+    },
 
-local windshieldRearArmour_Parts =
-{
-    ["WindshieldRear"] = {"Armour_LastWindshieldRearCondition", dmgPartMultiplier},
-}
+    Armour_WindshieldRear =
+    {
+        ["WindshieldRear"] = {"Armour_LastWRCondition", dmgPartMultiplier},
+    },
 
-local doorFrontLeftArmour_Parts =
-{
-    ["DoorFrontLeft"] = {"Armour_LastDoorFrontLeftCondition", dmgPartMultiplier},
-}
+    Armour_DoorFrontLeft =
+    {
+        ["DoorFrontLeft"] = {"Armour_LastDFLCondition", dmgPartMultiplier},
+    },
 
-local doorFrontRightArmour_Parts =
-{
-    ["DoorFrontRight"] = {"Armour_LastDoorFrontRightCondition", dmgPartMultiplier},
-}
+    Armour_DoorFrontRight =
+    {
+        ["DoorFrontRight"] = {"Armour_LastDFRCondition", dmgPartMultiplier},
+    },
 
-local doorRearLeftArmour_Parts =
-{
-    ["DoorRearLeft"] = {"Armour_LastDoorRearLeftCondition", dmgPartMultiplier},
-}
+    Armour_DoorRearLeft =
+    {
+        ["DoorRearLeft"] = {"Armour_LastDRLCondition", dmgPartMultiplier},
+    },
 
-local doorRearRightArmour_Parts =
-{
-    ["DoorRearRight"] = {"Armour_LastDoorRearRightCondition", dmgPartMultiplier},
-}
+    Armour_DoorRearRight =
+    {
+        ["DoorRearRight"] = {"Armour_LastDRRCondition", dmgPartMultiplier},
+    },
 
-local windowFrontLeftArmour_Parts =
-{
-    ["WindowFrontLeft"] = {"Armour_LastWindowFrontLeftCondition", dmgPartMultiplier},
-}
+    Armour_DoorMiddleLeft =
+    {
+        ["DoorMiddleLeft"] = {"Armour_LastDMLCondition", dmgPartMultiplier},
+    },
 
-local windowFrontRightArmour_Parts =
-{
-    ["WindowFrontRight"] = {"Armour_LastWindowFrontRightCondition", dmgPartMultiplier},
-}
+    Armour_DoorMiddleRight =
+    {
+        ["DoorMiddleRight"] = {"Armour_LastDMRCondition", dmgPartMultiplier},
+    },
 
-local windowRearLeftArmour_Parts =
-{
-    ["WindowRearLeft"] = {"Armour_LastWindowRearLeftCondition", dmgPartMultiplier},
-}
+    Armour_WindowFrontLeft =
+    {
+        ["WindowFrontLeft"] = {"Armour_LastWFLCondition", dmgPartMultiplier},
+    },
 
-local windowRearRightArmour_Parts =
-{
-    ["WindowRearRight"] = {"Armour_LastWindowRearRightCondition", dmgPartMultiplier},
-}
+    Armour_WindowFrontRight =
+    {
+        ["WindowFrontRight"] = {"Armour_LastWFRCondition", dmgPartMultiplier},
+    },
 
-local tireChains_Parts =
-{
-    ["TireFrontLeft"] = {"Armour_LastTireFrontLeftCondition", dmgPartMultiplier},
-    ["TireFrontRight"] = {"Armour_LastTireFrontRightondition", dmgPartMultiplier},
-    ["TireRearLeft"] = {"Armour_LastTireRearLeftCondition", dmgPartMultiplier},
-    ["TireRearRight"] = {"Armour_LastTireRearRightCondition", dmgPartMultiplier},
+    Armour_WindowRearLeft =
+    {
+        ["WindowRearLeft"] = {"Armour_LastWRLCondition", dmgPartMultiplier},
+    },
+
+    Armour_WindowRearRight =
+    {
+        ["WindowRearRight"] = {"Armour_LastWRRCondition", dmgPartMultiplier},
+    },
+
+    Armour_WindowMiddleLeft =
+    {
+        ["WindowMiddleLeft"] = {"Armour_LastWMLCondition", dmgPartMultiplier},
+    },
+
+    Armour_WindowMiddleRight =
+    {
+        ["WindowMiddleRight"] = {"Armour_LastWMRCondition", dmgPartMultiplier},
+    },
+
+    Armour_Trailer =
+    {
+        ["TrailerTrunk"] = {"Armour_LastTrailerTrunkCondition", dmgPartMultiplier},
+    },
+
+    TireChainFrontLeft =
+    {
+        ["TireFrontLeft"] = {"Armour_LastTFLCondition", dmgPartMultiplier},
+    },
+
+    TireChainFrontRight =
+    {
+        ["TireFrontRight"] = {"Armour_LastTFRCondition", dmgPartMultiplier},
+    },
+
+    TireChainRearLeft =
+    {
+        ["TireRearLeft"] = {"Armour_LastTRLCondition", dmgPartMultiplier},
+    },
+
+    TireChainRearRight =
+    {
+        ["TireRearRight"] = {"Armour_LastTRRCondition", dmgPartMultiplier},
+    },
 }
 
 local DEBUG = true
@@ -426,41 +467,32 @@ local function VehicleArmourUpdate(vehicle, part, protectedParts)
 end
 
 -- ============================================================================
--- LUA CALLS
+-- PARTS REGISTRY
 -- ============================================================================
 
-local function RegisterArmourPart(partName, parts)
-    Vehicles.InstallComplete[partName] = function(vehicle, part)
-        ArmourInstallComplete(vehicle, part, parts)
+Vehicles.InstallComplete.Armour = function(vehicle, part)
+    local parts = armourParts[part:getId()]
+    if not parts then
+        return
     end
 
-    Vehicles.UninstallComplete[partName] = function(vehicle, part, item)
-        ArmourUninstallComplete(vehicle, part, item, parts)
-    end
-
-    Vehicles.Update[partName] = function(vehicle, part)
-        VehicleArmourUpdate(vehicle, part, parts)
-    end
+    ArmourInstallComplete(vehicle, part, parts)
 end
 
-local armourParts = 
-{
-    Bullbar = bullbar_Parts,
-    HoodArmour = hoodArmour_Parts,
-    TrunkArmour = trunkArmour_Parts,
-    WindshieldArmour = windshieldArmour_Parts,
-    WindshieldRearArmour = windshieldRearArmour_Parts,
-    DoorFrontLeftArmour = doorFrontLeftArmour_Parts,
-    DoorFrontRightArmour = doorFrontRightArmour_Parts,
-    DoorRearLeftArmour = doorRearLeftArmour_Parts,
-    DoorRearRightArmour = doorRearRightArmour_Parts,
-    WindowFrontLeftArmour = windowFrontLeftArmour_Parts,
-    WindowFrontRightArmour = windowFrontRightArmour_Parts,
-    WindowRearLeftArmour = windowRearLeftArmour_Parts,
-    WindowRearRightArmour = windowRearRightArmour_Parts,
-    TireChains = tireChains_Parts,
-}
+Vehicles.UninstallComplete.Armour = function(vehicle, part, item)
+    local parts = armourParts[part:getId()]
+    if not parts then
+        return
+    end
 
-for partName, parts in pairs(armourParts) do
-    RegisterArmourPart(partName, parts)
+    ArmourUninstallComplete(vehicle, part, item, parts)
+end
+
+Vehicles.Update.Armour = function(vehicle, part)
+    local parts = armourParts[part:getId()]
+    if not parts then
+        return
+    end
+
+    VehicleArmourUpdate(vehicle, part, parts)
 end

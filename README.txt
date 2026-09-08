@@ -1,19 +1,36 @@
 A WIP mod that adds installable vehicle armor parts to vehicles
 
-so far I've setup the file structure, templated out the parts, patched the UI, worked out most of the lua armour logic, setup tiers for part durability, added roofracks with inventory and for now temporarily patched the vehicle scripts so I can test the changes.
+Done:
+- File structure setup
+- Template the armour parts
+- Vehicle Mechanics UI
+- LUA Armour logic functionality
+- Tiers for different parts
+- Roofracks with inventory
+- TireChains mapping onto wheels and inherit data
+- Rework armour parts template for tier model compatibility
+- Adapt Johnny's Lua script injection automation to work based on parts not passengers
+
+In Progress:
+- LUA Automation to work out what vehicles get RoofRacks
+- Modelling / texturing (I have some help thankfully from chayeeneek, seriously thank you!)
+
 
 Things still on the to do list:
-- Proper Lua script injection automation
-- Confirm tire chains work and how it will look (not sure if it needs 4 separate models for this but probably not)
-- Plan out what armour pieces we want and create them as items + recipes
+- LUA for swappable models based on the item installed (currently only 1 model is loaded)
+- Create the items and recipes for all the armour parts
 - Add recipe magazine
-- Modelling / texturing (I have some help thankfully from chayeeneek, seriously thank you!)
-- Offsetting the part models onto the different vehicle meshes themselves
 - Repair script so parts can be fixed on the go
+- Offsetting the part models onto the different vehicle meshes themselves
+- LUA update the injector to use part model offsets
 - Even more stress testing
 - Testing on a locally hosted MP server as well as testing it with bolo loadout
 - Investigate if we can bake engine condition repair into the mod (and other unfixable parts)
 - Swappable (or upgradeable) trunk capacity?
+- IF above possible make TruckBedCovers increase Trunk capacity instead of their own inventory
+- Plows
+- Roof lights
+- Attachable Tool Box to e.g. TruckBedOpen on pickups
 - Maybe a spray paint option?
 - Motorious support
 -

@@ -1,0 +1,33 @@
+{
+    "IGUI_VehiclePartCatarmour": "Armor",
+    "IGUI_CraftingCategories_VehicleArmour": "Vehicle Armor",
+	
+	"IGUI_VehiclePartArmour_Bullbar": "Bullbar",
+	"IGUI_VehiclePartArmour_Hood": "Hood Armor",
+	"IGUI_VehiclePartArmour_Trunk": "Trunk Armor",
+	"IGUI_VehiclePartArmour_Windshield": "Windshield Armor",
+	"IGUI_VehiclePartArmour_WindshieldRear": "Rear Windshield Armor",
+	
+	"IGUI_VehiclePartArmour_DoorFrontLeft": "Front Left Door Armor",
+	"IGUI_VehiclePartArmour_DoorFrontRight": "Front Right Door Armor",
+    "IGUI_VehiclePartArmour_DoorRearLeft": "Rear Left Door Armor",
+	"IGUI_VehiclePartArmour_DoorRearRight": "Rear Right Door Armor",
+    "IGUI_VehiclePartArmour_DoorMiddleLeft": "Middle Left Door Armor",
+	"IGUI_VehiclePartArmour_DoorMiddleRight": "Middle Right Door Armor",
+
+	"IGUI_VehiclePartArmour_WindowFrontLeft": "Front Left Window Armor",
+	"IGUI_VehiclePartArmour_WindowFrontRight": "Front Right Window Armor",
+	"IGUI_VehiclePartArmour_WindowRearLeft": "Rear Left Window Armor",
+	"IGUI_VehiclePartArmour_WindowRearRight": "Rear Right Window Armor",
+	"IGUI_VehiclePartArmour_WindowMiddleLeft": "Middle Left Window Armor",
+	"IGUI_VehiclePartArmour_WindowMiddleRight": "Middle Right Window Armor",
+	"IGUI_VehiclePartArmour_Trailer": "Reinforced Trailer Frame",
+
+	"IGUI_VehiclePartTireChainFrontLeft": "Front Left Tire Chain",
+	"IGUI_VehiclePartTireChainFrontRight": "Front Right Tire Chain",
+	"IGUI_VehiclePartTireChainRearLeft": "Rear Left Tire Chain",
+	"IGUI_VehiclePartTireChainRearRight": "Rear Right Tire Chain",
+	
+	"IGUI_VehiclePartStorage_RoofRack": "Roof Rack",
+	"IGUI_VehiclePartStorage_TruckBedCover": "Truck Bed Cover"
+}
