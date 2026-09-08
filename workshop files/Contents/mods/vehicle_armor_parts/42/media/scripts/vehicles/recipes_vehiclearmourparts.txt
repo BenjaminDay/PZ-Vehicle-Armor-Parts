@@ -1,0 +1,75 @@
+module Base
+{
+    craftRecipe MakeTier3Bullbar
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:4;Mechanics:3,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:10;Mechanics:5,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 1 tags[base:wrench] mode:keep flags[MayDegradeLight],
+            item 2 [Base.WeldingRods],
+            item 1 [Base.NutsBolts],
+            item 2 [Base.MetalBar],
+            item 2 [Base.SteelBar],
+            item 2 [Base.SteelBarHalf],
+        }
+        outputs
+        {
+            item 1 Base.T3Bullbar,
+        }
+    }
+        craftRecipe MakeARMOURITEM
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:4;Mechanics:3,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:10;Mechanics:5,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 1 tags[base:wrench] mode:keep flags[MayDegradeLight],
+            item 2 [Base.WeldingRods],
+            item 1 [Base.NutsBolts],
+            item 2 [Base.MetalBar],
+            item 2 [Base.SteelBar],
+            item 2 [Base.SteelBarHalf],
+        }
+        outputs
+        {
+            item 1 Base.ARMOURITEM,
+        }
+    }
+        craftRecipe MakeSTORAGEITEM
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:4;Mechanics:3,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:10;Mechanics:5,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 1 tags[base:wrench] mode:keep flags[MayDegradeLight],
+            item 2 [Base.WeldingRods],
+            item 1 [Base.NutsBolts],
+            item 2 [Base.MetalBar],
+            item 2 [Base.SteelBar],
+            item 2 [Base.SteelBarHalf],
+        }
+        outputs
+        {
+            item 1 Base.STORAGEITEM,
+        }
+    }
+}

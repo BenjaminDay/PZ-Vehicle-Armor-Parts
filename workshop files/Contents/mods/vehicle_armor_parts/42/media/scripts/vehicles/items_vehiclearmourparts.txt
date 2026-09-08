@@ -1,0 +1,71 @@
+module Base
+{
+    item T1Bullbar
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 15.0,
+        ItemType = base:normal,
+        Icon = icobullbar,
+        VehicleType = 1,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = static_bullbar
+    }
+    item T2Bullbar
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 15.0,
+        ItemType = base:normal,
+        Icon = icobullbar,
+        VehicleType = 1,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = static_bullbar,
+    }
+    item T3Bullbar
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 15.0,
+        ItemType = base:normal,
+        Icon = icobullbar,
+        VehicleType = 1,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = static_bullbar,
+    }
+    item T4Bullbar
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 15.0,
+        ItemType = base:normal,
+        Icon = icobullbar,
+        VehicleType = 1,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = static_bullbar,
+    }
+    item ARMOURITEM
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 15.0,
+        ItemType = base:normal,
+        Icon = icoARMOURITEM,
+        VehicleType = 1,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = static_ARMOURITEM,
+    }
+    item STORAGEITEM
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 15.0,
+        ItemType = base:normal,
+        Icon = icoSTORAGEITEM,
+        VehicleType = 1,
+        ConditionMax = 100,
+        ConditionAffectsCapacity = false,
+        MaxCapacity = 100,
+        MechanicsItem = true,
+        WorldStaticModel = static_STORAGEITEM,
+    }
+}

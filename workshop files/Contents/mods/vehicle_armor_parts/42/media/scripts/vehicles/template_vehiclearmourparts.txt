@@ -1,0 +1,1096 @@
+module Base
+{
+    template vehicle ArmourExtra
+    {
+        part Bullbar
+        {
+			model Bullbar
+				{
+                	file = Bullbar,
+                    offset = 0.0 -0.2 1.2,
+				}
+			area = Engine,
+            category = armour,
+            specificItem = false,
+            itemType = Base.T1Bullbar;Base.T2Bullbar;Base.T3Bullbar;Base.T4Bullbar,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.Bullbar,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.Bullbar,
+            }
+            lua
+            {
+                update = Vehicles.Update.Bullbar,
+            }
+        }
+        
+        part TireChains
+        {
+			model TireChains
+				{
+                	file = ARMOURNAME,
+				}
+            parent = TireFrontLeft,
+			area = TireFrontLeft,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.TireChains,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.TireChains,
+            }
+            lua
+            {
+                update = Vehicles.Update.TireChains,
+            }
+        }
+    }
+    template vehicle ArmourFront
+    {
+        part HoodArmour
+        {
+			model HoodArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = EngineDoor,
+			area = Engine,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.HoodArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.HoodArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.HoodArmour,
+            }
+        }
+
+        part WindshieldArmour
+        {
+			model WindshieldArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = Windshield,
+			area = Engine,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.WindshieldArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.WindshieldArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.WindshieldArmour,
+            }
+        }
+    }
+    template vehicle ArmourRear
+    {
+        part TrunkArmour
+        {
+			model TrunkArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = TrunkDoor,
+			area = TruckBed,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.TrunkArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.TrunkArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.TrunkArmour,
+            }
+        }
+
+        part WindshieldRearArmour
+        {
+			model WindshieldRearArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = WindshieldRear,
+			area = TruckBed,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.WindshieldRearArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.WindshieldRearArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.WindshieldRearArmour,
+            }
+        }
+    }
+    template vehicle Armour2Door
+    {
+        part DoorFrontLeftArmour
+        {
+			model DoorFrontLeftArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = DoorFrontLeft,
+			area = SeatFrontLeft,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.DoorFrontLeftArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.DoorFrontLeftArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.DoorFrontLeftArmour,
+            }
+        }
+
+        part DoorFrontRightArmour
+        {
+			model DoorFrontRightArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = DoorFrontRight,
+			area = SeatFrontRight,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.DoorFrontRightArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.DoorFrontRightArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.DoorFrontRightArmour,
+            }
+        }
+
+        part WindowFrontLeftArmour
+        {
+			model WindowFrontLeftArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = WindowFrontLeft,
+			area = SeatFrontLeft,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.WindowFrontLeftArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.WindowFrontLeftArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.WindowFrontLeftArmour,
+            }
+        }
+
+        part WindowFrontRightArmour
+        {
+			model WindowFrontRightArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = WindowFrontRight,
+			area = SeatFrontRight,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.WindowFrontRightArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.WindowFrontRightArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.WindowFrontRightArmour,
+            }
+        }
+    }
+    template vehicle Armour4Door
+    {
+        part DoorRearLeftArmour
+        {
+			model DoorRearLeftArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = DoorRearLeft,
+			area = SeatRearLeft,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.DoorRearLeftArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.DoorRearLeftArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.DoorRearLeftArmour,
+            }
+        }
+
+        part DoorRearRightArmour
+        {
+			model DoorRearRightArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = DoorRearRight,
+			area = SeatRearRight,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.DoorRearRightArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.DoorRearRightArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.DoorRearRightArmour,
+            }
+        }
+
+        part WindowRearLeftArmour
+        {
+			model WindowRearLeftArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = WindowRearLeft,
+			area = SeatRearLeft,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.WindowRearLeftArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.WindowRearLeftArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.WindowRearLeftArmour,
+            }
+        }
+
+        part WindowRearRightArmour
+        {
+			model WindowRearRightArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = WindowRearRight,
+			area = SeatRearRight,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.WindowRearRightArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.WindowRearRightArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.WindowRearRightArmour,
+            }
+        }
+    }
+    template vehicle Armour6Door
+    {
+        part DoorMiddleLeftArmour
+        {
+			model DoorMiddleLeftArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = DoorMiddleLeft,
+			area = SeatMiddleLeft,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.DoorMiddleLeftArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.DoorMiddleLeftArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.DoorMiddleLeftArmour,
+            }
+        }
+
+        part DoorMiddleRightArmour
+        {
+			model DoorMiddleRightArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = DoorMiddleRight,
+			area = SeatMiddleRight,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.DoorMiddleRightArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.DoorMiddleRightArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.DoorMiddleRightArmour,
+            }
+        }
+
+        part WindowMiddleLeftArmour
+        {
+			model WindowMiddleLeftArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = WindowMiddleLeft,
+			area = SeatMiddleLeft,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.WindowMiddleLeftArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.WindowMiddleLeftArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.WindowMiddleLeftArmour,
+            }
+        }
+
+        part WindowMiddleRightArmour
+        {
+			model WindowMiddleRightArmour
+				{
+                	file = ARMOURNAME,
+				}
+            parent = WindowMiddleRight,
+			area = SeatMiddleRight,
+            category = armour,
+            specificItem = false,
+            itemType = Base.ARMOURITEM,
+            mechanicRequireKey = false,
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+                complete = Vehicles.InstallComplete.WindowMiddleRightArmour,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+                complete = Vehicles.UninstallComplete.WindowMiddleRightArmour,
+            }
+            lua
+            {
+                update = Vehicles.Update.WindowMiddleRightArmour,
+            }
+        }
+    }
+    template vehicle Storage
+    {
+        part RoofRack
+        {
+			model RoofRack
+				{
+                	file = STORAGENAME,
+                    offset = 0.0 0.5 0.0,
+				}
+			area = TruckBed,
+            category = bodywork,
+            specificItem = false,
+            itemType = Base.STORAGEITEM,
+            mechanicRequireKey = false,
+            container
+            {
+                conditionAffectsCapacity = false,
+                test = Vehicles.ContainerAccess.TruckBedOpen,
+            }
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+				requireEmpty = true,
+            }
+        }
+
+        part TruckBedCover
+        {
+			model TruckBedCover
+				{
+                	file = STORAGENAME,
+				}
+			area = TruckBed,
+            category = bodywork,
+            specificItem = false,
+            itemType = Base.STORAGEITEM,
+            mechanicRequireKey = false,
+            container
+            {
+                conditionAffectsCapacity = false,
+                test = Vehicles.ContainerAccess.TruckBedOpen,
+            }
+            table install
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.InstallTest.Default,
+            }
+            table uninstall
+            {
+                items
+                {
+                    1
+                    {
+                        tags = base:wrench,
+                        count = 1,
+                        keep = true,
+                        equip = primary,
+                    }
+                }
+                time = 300,
+                skills = Mechanics:4,
+                recipes = Advanced Mechanics,
+                test = Vehicles.UninstallTest.Default,
+				requireEmpty = true,
+            }
+        }
+    }
+}
