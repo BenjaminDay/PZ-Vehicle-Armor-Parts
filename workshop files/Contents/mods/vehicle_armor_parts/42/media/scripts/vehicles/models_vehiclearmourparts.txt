@@ -1,28 +1,28 @@
 module Base
 {
-    model static_bullbar
+    model T1Bullbar
     {
         mesh = vehicles/Vehicles_Bullbar,
         texture = Vehicles/Vehicles_vehiclearmourparts,
         scale = 1,
     }
-    model static_ARMOURITEM
-    {
-        mesh = vehicles/Vehicles_ARMOURMODEL,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
-        scale = 1,
-    }
-    model static_STORAGEITEM
-    {
-        mesh = vehicles/Vehicles_STORAGEMODEL,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
-        scale = 1,
-    }
-    model Bullbar
+    model T2Bullbar
     {
         mesh = vehicles/Vehicles_Bullbar,
         texture = Vehicles/Vehicles_vehiclearmourparts,
-        scale = 1,
+        scale = 2,
+    }
+    model T3Bullbar
+    {
+        mesh = vehicles/Vehicles_Bullbar,
+        texture = Vehicles/Vehicles_vehiclearmourparts,
+        scale = 3,
+    }    
+    model T4Bullbar
+    {
+        mesh = vehicles/Vehicles_Bullbar,
+        texture = Vehicles/Vehicles_vehiclearmourparts,
+        scale = 4,
     }
     model ARMOURNAME
     {

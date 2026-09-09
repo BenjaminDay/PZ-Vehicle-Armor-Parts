@@ -12,13 +12,13 @@ Done:
 - Adapt Johnny's Lua script injection automation to work based on parts not passengers
 - LUA Automation to work out what vehicles get RoofRacks
 - LUA to add Area for RoofRack Interaction
+- LUA for swappable models based on the item installed (currently only 1 model is loaded)
 
 In Progress:
 - Modelling / texturing (I have some help thankfully from chayeeneek, seriously thank you!)
 
 
 Things still on the to do list:
-- LUA for swappable models based on the item installed (currently only 1 model is loaded)
 - Create the items and recipes for all the armour parts
 - Add recipe magazine
 - Repair script so parts can be fixed on the go

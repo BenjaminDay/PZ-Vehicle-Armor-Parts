@@ -4,9 +4,24 @@ module Base
     {
         part Armour_Bullbar
         {
-			model Bullbar
+			model T1Bullbar
 				{
-                	file = Bullbar,
+                	file = T1Bullbar,
+                    offset = 0.0 -0.2 1.2,
+				}
+            model T2Bullbar
+				{
+                	file = T2Bullbar,
+                    offset = 0.0 -0.2 1.2,
+				}
+            model T3Bullbar
+				{
+                	file = T3Bullbar,
+                    offset = 0.0 -0.2 1.2,
+				}
+            model T4Bullbar
+				{
+                	file = T4Bullbar,
                     offset = 0.0 -0.2 1.2,
 				}
 			area = Engine,
@@ -242,6 +257,7 @@ module Base
             }
             lua
             {
+                init = Vehicles.Init.Model,
                 update = Vehicles.Update.Armour,
             }
         }
@@ -349,7 +365,8 @@ module Base
             }
             lua
             {
-                update = Vehicles.Update.Armour,
+                init = Vehicles.Update.Armour,
+                update = Vehicles.Init.Model,
             }
         }
     }
@@ -421,6 +438,10 @@ module Base
                 recipes = Advanced Mechanics,
                 test = Vehicles.UninstallTest.Default,
 				requireEmpty = true,
+            }
+            lua
+            {
+                init = Vehicles.Init.Model,
             }
         }
     }

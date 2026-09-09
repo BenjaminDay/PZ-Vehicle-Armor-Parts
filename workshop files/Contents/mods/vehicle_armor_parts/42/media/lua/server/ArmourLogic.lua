@@ -281,9 +281,7 @@ end
 -- ============================================================================
 
 local function SetPartCondition(vehicle, part, condition)
-    if not part then
-        return
-    end
+    if not part then return end
 
     condition = math.floor(condition)
     if condition < 0 then
@@ -388,9 +386,7 @@ end
 -- ============================================================================
 local function ArmourInstallComplete(vehicle, part, protectedParts)
 
-    if not vehicle or not part then
-        return
-    end
+    if not vehicle or not part then return end
 
     local armourData = part:getModData()
 
@@ -418,9 +414,7 @@ end
 
 local function ArmourUninstallComplete(vehicle, part, item, protectedParts)
 
-    if not part then
-        return
-    end
+    if not part then return end
 
     local armourData = part:getModData()
 
@@ -437,18 +431,11 @@ end
 
 local function VehicleArmourUpdate(vehicle, part, protectedParts)
 
-    if isClient() and not isServer() then
-        return
-    end
-
-    if not vehicle or not part then
-        return
-    end
+    if isClient() and not isServer() then return end
+    if not vehicle or not part then return end
 
     -- if armour not installed
-    if not part:getInventoryItem() then
-        return
-    end
+    if not part:getInventoryItem() then return end
 
     local armourCondition = part:getCondition()
 
@@ -467,32 +454,63 @@ local function VehicleArmourUpdate(vehicle, part, protectedParts)
 end
 
 -- ============================================================================
+-- MODEL HANDLER
+-- ============================================================================
+
+-- item name to loaded model file name mapping
+local armourVisuals =
+{
+    Armour_Bullbar =
+    {
+        ["Base.T1Bullbar"] = "T1Bullbar",
+        ["Base.T2Bullbar"] = "T2Bullbar",
+        ["Base.T3Bullbar"] = "T3Bullbar",
+        ["Base.T4Bullbar"] = "T4Bullbar",
+    },
+}
+
+local function SetArmourModelVisible(part)
+    local visuals = armourVisuals[part:getId()]
+    if not visuals then return end
+
+    local installedModel = false
+    local item = part:getInventoryItem()
+    if item then
+        installedModel = visuals[item:getFullType()] or false
+    end
+
+    for _, modelName in pairs(visuals) do
+        part:setModelVisible(modelName, modelName == installedModel)
+    end
+end
+
+-- ============================================================================
 -- PARTS REGISTRY
 -- ============================================================================
 
+Vehicles.Init.Model = function(vehicle, part)
+    SetArmourModelVisible(part)
+end
+
 Vehicles.InstallComplete.Armour = function(vehicle, part)
     local parts = armourParts[part:getId()]
-    if not parts then
-        return
-    end
+    if not parts then return end
 
     ArmourInstallComplete(vehicle, part, parts)
+    SetArmourModelVisible(part)
 end
 
 Vehicles.UninstallComplete.Armour = function(vehicle, part, item)
     local parts = armourParts[part:getId()]
-    if not parts then
-        return
-    end
+    if not parts then return end
 
     ArmourUninstallComplete(vehicle, part, item, parts)
+    SetArmourModelVisible(part)
 end
 
 Vehicles.Update.Armour = function(vehicle, part)
     local parts = armourParts[part:getId()]
-    if not parts then
-        return
-    end
+    if not parts then return end
 
     VehicleArmourUpdate(vehicle, part, parts)
 end
