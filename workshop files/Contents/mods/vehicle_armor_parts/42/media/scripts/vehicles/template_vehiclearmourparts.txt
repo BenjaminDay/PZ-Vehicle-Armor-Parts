@@ -362,7 +362,7 @@ module Base
                 	file = STORAGENAME,
                     offset = 0.0 0.5 0.0,
 				}
-			area = TruckBed,
+			area = Roof,
             itemType = Base.STORAGEITEM,
         }
 

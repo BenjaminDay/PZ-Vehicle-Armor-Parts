@@ -10,9 +10,10 @@ Done:
 - TireChains mapping onto wheels and inherit data
 - Rework armour parts template for tier model compatibility
 - Adapt Johnny's Lua script injection automation to work based on parts not passengers
+- LUA Automation to work out what vehicles get RoofRacks
+- LUA to add Area for RoofRack Interaction
 
 In Progress:
-- LUA Automation to work out what vehicles get RoofRacks
 - Modelling / texturing (I have some help thankfully from chayeeneek, seriously thank you!)
 
 
@@ -28,6 +29,7 @@ Things still on the to do list:
 - Investigate if we can bake engine condition repair into the mod (and other unfixable parts)
 - Swappable (or upgradeable) trunk capacity?
 - IF above possible make TruckBedCovers increase Trunk capacity instead of their own inventory
+- Animate RoofRack / TruckBedOpen storage like Furniture Shelves have based on fullness
 - Plows
 - Roof lights
 - Attachable Tool Box to e.g. TruckBedOpen on pickups

@@ -9,7 +9,7 @@ module Base
         VehicleType = 1,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = static_bullbar
+        WorldStaticModel = static_bullbar,
     }
     item T2Bullbar
     {
