@@ -11,8 +11,8 @@ module Base
 				}
             model Bone_Bullbar
 				{
-                	file = Bone_Bullbar,
-                    offset = 0.0 -0.2 1.2,
+                	file = CarNormal_Bone_Bullbar,
+                    offset = 0.0 0.0 0.0,
 				}
             model Scrap_Bullbar
 				{
@@ -37,7 +37,7 @@ module Base
         {
 			model HoodArmour
 				{
-                	file = ARMOURNAME,
+                	file = CarNormal_Bone_HoodArmour,
 				}
             parent = EngineDoor,
 			area = Engine,
@@ -48,7 +48,7 @@ module Base
         {
 			model WindshieldArmour
 				{
-                	file = ARMOURNAME,
+                	file = CarNormal_Bone_WindshieldArmour,
 				}
             parent = Windshield,
 			area = Engine,
@@ -59,7 +59,7 @@ module Base
         {
 			model TrunkArmour
 				{
-                	file = ARMOURNAME,
+                	file = CarNormal_Bone_TrunkArmour,
 				}
             parent = TrunkDoor,
 			area = TruckBed,
@@ -70,7 +70,7 @@ module Base
         {
 			model WindshieldRearArmour
 				{
-                	file = ARMOURNAME,
+                	file = CarNormal_Bone_WindshieldRearArmour,
 				}
             parent = WindshieldRear,
 			area = TruckBed,
@@ -81,7 +81,7 @@ module Base
         {
 			model DoorFrontLeftArmour
 				{
-                	file = ARMOURNAME,
+                	file = CarNormal_Bone_DoorFrontLeftArmour,
 				}
             parent = DoorFrontLeft,
 			area = SeatFrontLeft,
@@ -92,7 +92,7 @@ module Base
         {
 			model DoorFrontRightArmour
 				{
-                	file = ARMOURNAME,
+                	file = CarNormal_Bone_DoorFrontRightArmour,
 				}
             parent = DoorFrontRight,
 			area = SeatFrontRight,
@@ -103,7 +103,7 @@ module Base
         {
 			model WindowFrontLeftArmour
 				{
-                	file = ARMOURNAME,
+                	file = CarNormal_Bone_WindowFrontLeftArmour,
 				}
             parent = WindowFrontLeft,
 			area = SeatFrontLeft,
@@ -114,7 +114,7 @@ module Base
         {
 			model WindowFrontRightArmour
 				{
-                	file = ARMOURNAME,
+                	file = CarNormal_Bone_WindowFrontRightArmour,
 				}
             parent = WindowFrontRight,
 			area = SeatFrontRight,
@@ -125,7 +125,7 @@ module Base
         {
 			model DoorRearLeftArmour
 				{
-                	file = ARMOURNAME,
+                	file = CarNormal_Bone_DoorRearLeftArmour,
 				}
             parent = DoorRearLeft,
 			area = SeatRearLeft,
@@ -136,7 +136,7 @@ module Base
         {
 			model DoorRearRightArmour
 				{
-                	file = ARMOURNAME,
+                	file = CarNormal_Bone_DoorRearRightArmour,
 				}
             parent = DoorRearRight,
 			area = SeatRearRight,
@@ -147,7 +147,7 @@ module Base
         {
 			model WindowRearLeftArmour
 				{
-                	file = ARMOURNAME,
+                	file = CarNormal_Bone_WindowRearLeftArmour,
 				}
             parent = WindowRearLeft,
 			area = SeatRearLeft,
@@ -158,7 +158,7 @@ module Base
         {
 			model WindowRearRightArmour
 				{
-                	file = ARMOURNAME,
+                	file = CarNormal_Bone_WindowRearRightArmour,
 				}
             parent = WindowRearRight,
 			area = SeatRearRight,
@@ -383,8 +383,8 @@ module Base
         {
 			model RoofRack
 				{
-                	file = STORAGENAME,
-                    offset = 0.0 0.5 0.0,
+                	file = CarNormal_Bone_RoofRack,
+                    offset = 0.0 0.0 0.0,
 				}
 			area = Roof,
             itemType = Base.Wood_RoofRack;Base.Bone_RoofRack;Base.Scrap_RoofRack;Base.Light_RoofRack;Base.Heavy_RoofRack,

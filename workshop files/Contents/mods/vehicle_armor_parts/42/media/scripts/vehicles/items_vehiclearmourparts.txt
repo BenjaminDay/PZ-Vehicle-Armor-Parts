@@ -95,7 +95,7 @@ module Base
         Icon = icobullbar,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = ARMOURNAME,
+        WorldStaticModel = CarNormal_Bone_Bullbar,
     }
     item Bone_HoodArmour
     {
@@ -105,7 +105,7 @@ module Base
         Icon = icoBone,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = ARMOURNAME,
+        WorldStaticModel = CarNormal_Bone_HoodArmour,
     }
     item Bone_WindshieldArmour
     {
@@ -115,7 +115,7 @@ module Base
         Icon = icoBone,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = ARMOURNAME,
+        WorldStaticModel = CarNormal_Bone_WindshieldArmour,
     }
     item Bone_DoorArmour
     {
@@ -125,7 +125,7 @@ module Base
         Icon = icoBone,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = ARMOURNAME,
+        WorldStaticModel = CarNormal_Bone_DoorFrontLeftArmour,
     }
     item Bone_WindowArmour
     {
@@ -135,7 +135,7 @@ module Base
         Icon = icoBone,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = ARMOURNAME,
+        WorldStaticModel = CarNormal_Bone_WindowFrontLeftArmour,
     }
     item Bone_TrunkArmour
     {
@@ -145,7 +145,7 @@ module Base
         Icon = icoBone,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = ARMOURNAME,
+        WorldStaticModel = CarNormal_Bone_TrunkArmour,
     }
     item Bone_TruckBedCover
     {
@@ -169,7 +169,7 @@ module Base
         ConditionAffectsCapacity = false,
         MaxCapacity = 40,
         MechanicsItem = true,
-        WorldStaticModel = STORAGENAME,
+        WorldStaticModel = CarNormal_Bone_RoofRack,
     }
 
 
