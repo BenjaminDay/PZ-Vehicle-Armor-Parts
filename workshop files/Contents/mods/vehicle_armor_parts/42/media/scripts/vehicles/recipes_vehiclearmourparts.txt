@@ -1,30 +1,998 @@
 module Base
 {
-    craftRecipe MakeTier3Bullbar
+    craftRecipe MakeWood_Bullbar
     {
         time = 300,
         Tags = AnySurfaceCraft,
-        SkillRequired = MetalWelding:4;Mechanics:3,
-        timedAction = Welding_Surface,
-        xpAward = MetalWelding:10;Mechanics:5,
+        SkillRequired = Woodwork:4,
+        timedAction = MakingHammer_Surface,
+        xpAward = Woodwork:10,
         category = VehicleArmour,
         inputs
         {
-            item 4 [Base.BlowTorch],
-            item 1 tags[base:weldingmask] mode:keep,
-            item 1 tags[base:wrench] mode:keep flags[MayDegradeLight],
-            item 2 [Base.WeldingRods],
-            item 1 [Base.NutsBolts],
-            item 2 [Base.MetalBar],
-            item 2 [Base.SteelBar],
-            item 2 [Base.SteelBarHalf],
+            item 1 tags[base:saw] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeVeryLight],
+            item 3 [Base.Log],
+            item 12 [Base.Nails],
         }
         outputs
         {
-            item 1 Base.T3Bullbar,
+            item 1 Base.Wood_Bullbar,
         }
     }
-        craftRecipe MakeARMOURITEM
+    craftRecipe MakeWood_HoodArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Woodwork:4,
+        timedAction = MakingHammer_Surface,
+        xpAward = Woodwork:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:saw] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeVeryLight],
+            item 10 [Base.Plank],
+            item 20 [Base.Nails],
+        }
+        outputs
+        {
+            item 1 Base.Wood_HoodArmour,
+        }
+    }
+    craftRecipe MakeWood_WindshieldArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Woodwork:4,
+        timedAction = MakingHammer_Surface,
+        xpAward = Woodwork:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:saw] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeVeryLight],
+            item 4 [Base.Plank],
+            item 12 [Base.Nails],
+        }
+        outputs
+        {
+            item 1 Base.Wood_WindshieldArmour,
+        }
+    }
+    craftRecipe MakeWood_DoorArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Woodwork:4,
+        timedAction = MakingHammer_Surface,
+        xpAward = Woodwork:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:saw] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeVeryLight],
+            item 2 [Base.Plank],
+            item 16 [Base.Nails],
+        }
+        outputs
+        {
+            item 1 Base.Wood_DoorArmour,
+        }
+    }
+    craftRecipe MakeWood_WindowArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Woodwork:4,
+        timedAction = MakingHammer_Surface,
+        xpAward = Woodwork:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:saw] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeVeryLight],
+            item 2 [Base.Plank],
+            item 16 [Base.Nails],
+        }
+        outputs
+        {
+            item 1 Base.Wood_WindowArmour,
+        }
+    }
+    craftRecipe MakeWood_TrunkArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Woodwork:4,
+        timedAction = MakingHammer_Surface,
+        xpAward = Woodwork:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:saw] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeVeryLight],
+            item 10 [Base.Plank],
+            item 20 [Base.Nails],
+        }
+        outputs
+        {
+            item 1 Base.Wood_TrunkArmour,
+        }
+    }
+    craftRecipe MakeWood_TruckBedCover
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Woodwork:4,
+        timedAction = MakingHammer_Surface,
+        xpAward = Woodwork:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:saw] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeVeryLight],
+            item 3 [Base.Log],
+            item 8 [Base.Plank],
+            item 24 [Base.Nails],
+        }
+        outputs
+        {
+            item 1 Base.Wood_TruckBedCover,
+        }
+    }
+    craftRecipe MakeWood_RoofRack
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Woodwork:4,
+        timedAction = MakingHammer_Surface,
+        xpAward = Woodwork:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:saw] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeVeryLight],
+            item 8 [Base.Plank],
+            item 16 [Base.Nails],
+        }
+        outputs
+        {
+            item 1 Base.Wood_RoofRack,
+        }
+    }
+
+
+
+    craftRecipe MakeBone_Bullbar
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Carving:4,
+        timedAction = HammerBoneStanding,
+        xpAward = Carving:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:whetstone;base:file] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer;base:sledgehammer;base:clubhammer;base:hammerstone] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:saw;base:smallsaw;base:crudesaw;base:sharpknife;base:meatcleaver] mode:keep flags[MayDegradeLight],
+            item 2 [Base.AnimalBone] flags[AllowDestroyedItem],
+            item 2 [Base.LargeAnimalBone] flags[AllowDestroyedItem],
+            item 4 [Base.LeatherStrips],
+            item 1 [Base.DeerStag_Skull],
+        }
+        outputs
+        {
+            item 1 Base.Bone_Bullbar,
+        }
+    }
+    craftRecipe MakeBone_HoodArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Carving:4,
+        timedAction = HammerBoneStanding,
+        xpAward = Carving:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:whetstone;base:file] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer;base:sledgehammer;base:clubhammer;base:hammerstone] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:saw;base:smallsaw;base:crudesaw;base:sharpknife;base:meatcleaver] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors;base:sharpknife] mode:keep flags[MayDegradeLight;IsNotDull],
+            item 2 [Base.LargeAnimalBone] flags[AllowDestroyedItem],
+            item 6 [Base.LeatherStrips],
+            item 3 [Base.Rope],
+            item 1 tags[base:leathercrudetannedlarge;base:leathercrudewetlarge;base:leatherfurtannedlarge;base:leatherfurwetlarge],
+
+        }
+        outputs
+        {
+            item 1 Base.Bone_HoodArmour,
+        }
+    }
+    craftRecipe MakeBone_WindshieldArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Carving:4,
+        timedAction = HammerBoneStanding,
+        xpAward = Carving:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:whetstone;base:file] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer;base:sledgehammer;base:clubhammer;base:hammerstone] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:saw;base:smallsaw;base:crudesaw;base:sharpknife;base:meatcleaver] mode:keep flags[MayDegradeLight],
+            item 8 [Base.SmallAnimalBone] flags[AllowDestroyedItem],
+            item 3 [Base.AnimalBone] flags[AllowDestroyedItem],
+        }
+        outputs
+        {
+            item 1 Base.Bone_WindshieldArmour,
+        }
+    }
+    craftRecipe MakeBone_DoorArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Carving:4,
+        timedAction = HammerBoneStanding,
+        xpAward = Carving:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:whetstone;base:file] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer;base:sledgehammer;base:clubhammer;base:hammerstone] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:saw;base:smallsaw;base:crudesaw;base:sharpknife;base:meatcleaver] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors;base:sharpknife] mode:keep flags[MayDegradeLight;IsNotDull],
+            item 1 [Base.SmallAnimalBone] flags[AllowDestroyedItem],
+            item 1 tags[base:leathercrudetannedmedium;base:leathercrudewetmedium;base:leatherfurtannedmedium;base:leatherfurwetmedium],
+        }
+        outputs
+        {
+            item 1 Base.Bone_DoorArmour,
+        }
+    }
+    craftRecipe MakeBone_WindowArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Carving:4,
+        timedAction = HammerBoneStanding,
+        xpAward = Carving:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:whetstone;base:file] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer;base:sledgehammer;base:clubhammer;base:hammerstone] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:saw;base:smallsaw;base:crudesaw;base:sharpknife;base:meatcleaver] mode:keep flags[MayDegradeLight],
+            item 6 [Base.SmallAnimalBone] flags[AllowDestroyedItem],
+        }
+        outputs
+        {
+            item 1 Base.Bone_WindowArmour,
+        }
+    }
+    craftRecipe MakeBone_TrunkArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Carving:4,
+        timedAction = HammerBoneStanding,
+        xpAward = Carving:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:whetstone;base:file] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer;base:sledgehammer;base:clubhammer;base:hammerstone] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:saw;base:smallsaw;base:crudesaw;base:sharpknife;base:meatcleaver] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors;base:sharpknife] mode:keep flags[MayDegradeLight;IsNotDull],
+            item 2 [Base.AnimalBone] flags[AllowDestroyedItem],
+            item 4 [Base.LargeAnimalBone] flags[AllowDestroyedItem],
+            item 10 [Base.LeatherStrips],
+            item 3 [Base.Rope],
+            item 1 tags[base:leathercrudetannedlarge;base:leathercrudewetlarge;base:leatherfurtannedlarge;base:leatherfurwetlarge],
+        }
+        outputs
+        {
+            item 1 Base.Bone_TrunkArmour,
+        }
+    }
+    craftRecipe MakeBone_TruckBedCover
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Carving:4,
+        timedAction = HammerBoneStanding,
+        xpAward = Carving:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:whetstone;base:file] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer;base:sledgehammer;base:clubhammer;base:hammerstone] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:saw;base:smallsaw;base:crudesaw;base:sharpknife;base:meatcleaver] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors;base:sharpknife] mode:keep flags[MayDegradeLight;IsNotDull],
+            item 6 [Base.AnimalBone] flags[AllowDestroyedItem],
+            item 3 [Base.LargeAnimalBone] flags[AllowDestroyedItem],
+            item 1 tags[base:leathercrudetannedlarge;base:leathercrudewetlarge;base:leatherfurtannedlarge;base:leatherfurwetlarge],
+        }
+        outputs
+        {
+            item 1 Base.Bone_TruckBedCover,
+        }
+    }
+    craftRecipe MakeBone_RoofRack
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = Carving:4,
+        timedAction = HammerBoneStanding,
+        xpAward = Carving:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 1 tags[base:whetstone;base:file] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:hammer;base:sledgehammer;base:clubhammer;base:hammerstone] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:saw;base:smallsaw;base:crudesaw;base:sharpknife;base:meatcleaver] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:scissors;base:sharpknife] mode:keep flags[MayDegradeLight;IsNotDull],
+            item 6 [Base.AnimalBone] flags[AllowDestroyedItem],
+            item 3 [Base.LargeAnimalBone] flags[AllowDestroyedItem],
+            item 1 tags[base:leathercrudetannedlarge;base:leathercrudewetlarge;base:leatherfurtannedlarge;base:leatherfurwetlarge],
+        }
+        outputs
+        {
+            item 1 Base.Bone_RoofRack,
+        }
+    }
+
+
+
+    craftRecipe MakeScrap_Bullbar
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:4,
+        timedAction = HammerMetalStanding,
+        xpAward = MetalWelding:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 2 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 4 [Base.ScrapMetal;Base.SteelScrap;Base.IronScrap],
+            item 2 [Base.UnusableMetal;Base.SmallSheetMetal],
+            item 10 [Base.CircularSawblade_Half],
+            item 4 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Scrap_Bullbar,
+        }
+    }
+    craftRecipe MakeScrap_HoodArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:4,
+        timedAction = HammerMetalStanding,
+        xpAward = MetalWelding:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 2 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 4 [Base.ScrapMetal;Base.SteelScrap;Base.IronScrap],
+            item 4 [Base.UnusableMetal;Base.SmallSheetMetal],
+            item 12 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Scrap_HoodArmour,
+        }
+    }
+    craftRecipe MakeScrap_WindshieldArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:4,
+        timedAction = HammerMetalStanding,
+        xpAward = MetalWelding:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 2 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 1 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 3 [Base.ScrapMetal;Base.SteelScrap;Base.IronScrap],
+            item 3 [Base.UnusableMetal;Base.SmallSheetMetal],
+            item 6 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Scrap_WindshieldArmour,
+        }
+    }
+    craftRecipe MakeScrap_DoorArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:4,
+        timedAction = HammerMetalStanding,
+        xpAward = MetalWelding:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 2 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 1 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 2 [Base.ScrapMetal;Base.SteelScrap;Base.IronScrap],
+            item 2 [Base.UnusableMetal;Base.SmallSheetMetal],
+            item 4 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Scrap_DoorArmour,
+        }
+    }
+    craftRecipe MakeScrap_WindowArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:4,
+        timedAction = HammerMetalStanding,
+        xpAward = MetalWelding:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 2 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 1 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 2 [Base.ScrapMetal;Base.SteelScrap;Base.IronScrap],
+            item 2 [Base.UnusableMetal;Base.SmallSheetMetal],
+            item 4 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Scrap_WindowArmour,
+        }
+    }
+    craftRecipe MakeScrap_TrunkArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:4,
+        timedAction = HammerMetalStanding,
+        xpAward = MetalWelding:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 2 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 6 [Base.ScrapMetal;Base.SteelScrap;Base.IronScrap],
+            item 6 [Base.UnusableMetal;Base.SmallSheetMetal],
+            item 12 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Scrap_TrunkArmour,
+        }
+    }
+    craftRecipe MakeScrap_TruckBedCover
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:4,
+        timedAction = HammerMetalStanding,
+        xpAward = MetalWelding:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 2 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 1 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+            item 2 [Base.HeavyChain],
+            item 5 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Scrap_TruckBedCover,
+        }
+    }
+    craftRecipe MakeScrap_RoofRack
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:4,
+        timedAction = HammerMetalStanding,
+        xpAward = MetalWelding:10,
+        category = VehicleArmour,
+        inputs
+        {
+            item 2 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 1 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+            item 2 [Base.HeavyChain],
+            item 5 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Scrap_RoofRack,
+        }
+    }
+
+
+
+    craftRecipe MakeLight_Bullbar
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:6,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:15,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 2 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+            item 4 [Base.IronBar],
+            item 2 [Base.IronBarHalf],
+            item 7 [Base.IronBarQuarter],
+            item 4 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Light_Bullbar,
+        }
+    }
+    craftRecipe MakeLight_HoodArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:6,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:15,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 2 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+            item 7 [Base.IronBar],
+            item 2 [Base.IronBarHalf],
+            item 8 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Light_HoodArmour,
+        }
+    }
+    craftRecipe MakeLight_WindshieldArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:6,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:15,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 2 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+            item 3 [Base.IronBarHalf],
+            item 8 [Base.IronBarQuarter],
+            item 4 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Light_WindshieldArmour,
+        }
+    }
+    craftRecipe MakeLight_DoorArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:6,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:15,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 2 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+            item 5 [Base.IronBarHalf],
+            item 4 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Light_DoorArmour,
+        }
+    }
+    craftRecipe MakeLight_WindowArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:6,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:15,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 2 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+            item 2 [Base.IronBarHalf],
+            item 4 [Base.IronBarQuarter],
+            item 4 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Light_WindowArmour,
+        }
+    }
+    craftRecipe MakeLight_TrunkArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:6,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:15,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 2 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+            item 8 [Base.IronBar],
+            item 8 [Base.IronBarHalf],
+            item 8 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Light_TrunkArmour,
+        }
+    }
+    craftRecipe MakeLight_TruckBedCover
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:6,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:15,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 2 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+            item 8 [Base.IronBarHalf],
+            item 2 [Base.IronBarQuarter],
+            item 4 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Light_TruckBedCover,
+        }
+    }
+    craftRecipe MakeLight_RoofRack
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:6,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:15,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 2 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+            item 8 [Base.IronBarHalf],
+            item 2 [Base.IronBarQuarter],
+            item 4 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Light_RoofRack,
+        }
+    }
+
+
+
+    craftRecipe MakeHeavy_Bullbar
+    {
+        time = 300,
+        Tags = AdvancedForge,
+        SkillRequired = Blacksmith:6,
+        timedAction = HammerMetalStanding,
+        xpAward = Blacksmith:15,
+        category = VehicleArmour,
+        inputs
+		{
+            item 1 [Base.SheetMetal],
+			item 8 tags[base:charcoal],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:ballpeenhammer] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:tongs] mode:keep flags[MayDegradeLight],
+		}
+        outputs
+        {
+            item 1 Base.Heavy_Bullbar,
+        }
+    }
+    craftRecipe MakeHeavy_HoodArmour
+    {
+        time = 300,
+        Tags = AdvancedForge,
+        SkillRequired = Blacksmith:6,
+        timedAction = HammerMetalStanding,
+        xpAward = Blacksmith:15,
+        category = VehicleArmour,
+        inputs
+		{
+            item 4 [Base.SheetMetal],
+			item 8 tags[base:charcoal],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:ballpeenhammer] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:tongs] mode:keep flags[MayDegradeLight],
+		}
+        outputs
+        {
+            item 1 Base.Heavy_HoodArmour,
+        }
+    }
+    craftRecipe MakeHeavy_WindshieldArmour
+    {
+        time = 300,
+        Tags = AdvancedForge,
+        SkillRequired = Blacksmith:6,
+        timedAction = HammerMetalStanding,
+        xpAward = Blacksmith:15,
+        category = VehicleArmour,
+        inputs
+		{
+            item 2 [Base.SheetMetal],
+			item 8 tags[base:charcoal],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:ballpeenhammer] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:tongs] mode:keep flags[MayDegradeLight],
+		}
+        outputs
+        {
+            item 1 Base.Heavy_WindshieldArmour,
+        }
+    }
+    craftRecipe MakeHeavy_DoorArmour
+    {
+        time = 300,
+        Tags = AdvancedForge,
+        SkillRequired = Blacksmith:6,
+        timedAction = HammerMetalStanding,
+        xpAward = Blacksmith:15,
+        category = VehicleArmour,
+        inputs
+		{
+            item 1 [Base.SheetMetal],
+            item 1 [Base.SmallSheetMetal],
+			item 8 tags[base:charcoal],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:ballpeenhammer] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:tongs] mode:keep flags[MayDegradeLight],
+		}
+        outputs
+        {
+            item 1 Base.Heavy_DoorArmour,
+        }
+    }
+    craftRecipe MakeHeavy_WindowArmour
+    {
+        time = 300,
+        Tags = AdvancedForge,
+        SkillRequired = Blacksmith:6,
+        timedAction = HammerMetalStanding,
+        xpAward = Blacksmith:15,
+        category = VehicleArmour,
+        inputs
+		{
+            item 1 [Base.SheetMetal],
+            item 1 [Base.SmallSheetMetal],
+			item 8 tags[base:charcoal],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:ballpeenhammer] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:tongs] mode:keep flags[MayDegradeLight],
+		}
+        outputs
+        {
+            item 1 Base.Heavy_WindowArmour,
+        }
+    }
+    craftRecipe MakeHeavy_TrunkArmour
+    {
+        time = 300,
+        Tags = AdvancedForge,
+        SkillRequired = Blacksmith:6,
+        timedAction = HammerMetalStanding,
+        xpAward = Blacksmith:15,
+        category = VehicleArmour,
+        inputs
+		{
+            item 5 [Base.SheetMetal],
+			item 8 tags[base:charcoal],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:ballpeenhammer] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:tongs] mode:keep flags[MayDegradeLight],
+		}
+        outputs
+        {
+            item 1 Base.Heavy_TrunkArmour,
+        }
+    }
+    craftRecipe MakeHeavy_TruckBedCover
+    {
+        time = 300,
+        Tags = AdvancedForge,
+        SkillRequired = Blacksmith:6,
+        timedAction = HammerMetalStanding,
+        xpAward = Blacksmith:15,
+        category = VehicleArmour,
+        inputs
+		{
+            item 1 [Base.SheetMetal],
+			item 8 tags[base:charcoal],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:ballpeenhammer] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:tongs] mode:keep flags[MayDegradeLight],
+		}
+        outputs
+        {
+            item 1 Base.Heavy_TruckBedCover,
+        }
+    }
+    craftRecipe MakeHeavy_RoofRack
+    {
+        time = 300,
+        Tags = AdvancedForge,
+        SkillRequired = Blacksmith:6,
+        timedAction = HammerMetalStanding,
+        xpAward = Blacksmith:15,
+        category = VehicleArmour,
+        inputs
+		{
+            item 1 [Base.SheetMetal],
+			item 8 tags[base:charcoal],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:ballpeenhammer] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:tongs] mode:keep flags[MayDegradeLight],
+		}
+        outputs
+        {
+            item 1 Base.Heavy_RoofRack,
+        }
+    }
+
+
+
+    craftRecipe MakeLight_TireChain
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:6,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:15,
+        category = VehicleArmour,
+        inputs
+        {
+            item 2 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 1 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+            item 10 [Base.Wire],
+        }
+        outputs
+        {
+            item 1 Base.Light_TireChain,
+        }
+    }
+    craftRecipe MakeHeavy_TireChain
+    {
+        time = 300,
+        Tags = AdvancedForge,
+        SkillRequired = Blacksmith:6,
+        timedAction = HammerMetalStanding,
+        xpAward = Blacksmith:15,
+        category = VehicleArmour,
+        inputs
+		{
+            item 1 [Base.HeavyChain],
+			item 2 tags[base:charcoal],
+            item 1 tags[base:ballpeenhammer] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:tongs] mode:keep flags[MayDegradeLight],
+		}
+        outputs
+        {
+            item 1 Base.Heavy_TireChain,
+        }
+    }
+
+
+
+    craftRecipe MakeLight_TrailerArmour
+    {
+        time = 300,
+        Tags = AnySurfaceCraft,
+        SkillRequired = MetalWelding:6,
+        timedAction = Welding_Surface,
+        xpAward = MetalWelding:15,
+        category = VehicleArmour,
+        inputs
+        {
+            item 4 [Base.BlowTorch],
+            item 1 tags[base:weldingmask] mode:keep,
+            item 2 [Base.WeldingRods],
+            item 1 tags[base:hammer] mode:keep flags[MayDegradeLight],
+            item 8 [Base.IronBarHalf],
+            item 2 [Base.IronBarQuarter],
+            item 4 [Base.Screws],
+        }
+        outputs
+        {
+            item 1 Base.Light_TrailerArmour,
+        }
+    }
+    craftRecipe MakeHeavy_TrailerArmour
+    {
+        time = 300,
+        Tags = AdvancedForge,
+        SkillRequired = Blacksmith:6,
+        timedAction = HammerMetalStanding,
+        xpAward = Blacksmith:15,
+        category = VehicleArmour,
+        inputs
+		{
+            item 1 [Base.SheetMetal],
+			item 8 tags[base:charcoal],
+			item 1 [Base.SheetMetalSnips] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:ballpeenhammer] mode:keep flags[MayDegradeLight],
+            item 1 tags[base:tongs] mode:keep flags[MayDegradeLight],
+		}
+        outputs
+        {
+            item 1 Base.Heavy_TrailerArmour,
+        }
+    }
+
+
+
+    craftRecipe MakeARMOURITEM
     {
         time = 300,
         Tags = AnySurfaceCraft,
@@ -34,21 +1002,21 @@ module Base
         category = VehicleArmour,
         inputs
         {
-            item 4 [Base.BlowTorch],
+            item 9 [Base.BlowTorch],
             item 1 tags[base:weldingmask] mode:keep,
             item 1 tags[base:wrench] mode:keep flags[MayDegradeLight],
-            item 2 [Base.WeldingRods],
-            item 1 [Base.NutsBolts],
-            item 2 [Base.MetalBar],
-            item 2 [Base.SteelBar],
-            item 2 [Base.SteelBarHalf],
+            item 99 [Base.WeldingRods],
+            item 99 [Base.NutsBolts],
+            item 99 [Base.MetalBar],
+            item 99 [Base.SteelBar],
+            item 99 [Base.SteelBarHalf],
         }
         outputs
         {
             item 1 Base.ARMOURITEM,
         }
     }
-        craftRecipe MakeSTORAGEITEM
+    craftRecipe MakeSTORAGEITEM
     {
         time = 300,
         Tags = AnySurfaceCraft,
@@ -58,14 +1026,14 @@ module Base
         category = VehicleArmour,
         inputs
         {
-            item 4 [Base.BlowTorch],
+            item 99 [Base.BlowTorch],
             item 1 tags[base:weldingmask] mode:keep,
             item 1 tags[base:wrench] mode:keep flags[MayDegradeLight],
-            item 2 [Base.WeldingRods],
-            item 1 [Base.NutsBolts],
-            item 2 [Base.MetalBar],
-            item 2 [Base.SteelBar],
-            item 2 [Base.SteelBarHalf],
+            item 99 [Base.WeldingRods],
+            item 99 [Base.NutsBolts],
+            item 99 [Base.MetalBar],
+            item 99 [Base.SteelBar],
+            item 99 [Base.SteelBarHalf],
         }
         outputs
         {

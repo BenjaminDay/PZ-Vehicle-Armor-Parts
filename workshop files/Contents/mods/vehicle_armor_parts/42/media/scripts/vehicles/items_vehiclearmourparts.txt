@@ -1,71 +1,506 @@
 module Base
 {
-    item T1Bullbar
+    item Wood_Bullbar
     {
-        DisplayCategory = VehicleMaintenance,
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icobullbar,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Wood_HoodArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoWood,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Wood_WindshieldArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoWood,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Wood_DoorArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoWood,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Wood_WindowArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoWood,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Wood_TrunkArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoWood,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Wood_TruckBedCover
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoStorage,
+        ConditionMax = 100,
+        ConditionAffectsCapacity = false,
+        MaxCapacity = 20,
+        MechanicsItem = true,
+        WorldStaticModel = STORAGENAME,
+    }
+    item Wood_RoofRack
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoStorage,
+        ConditionMax = 100,
+        ConditionAffectsCapacity = false,
+        MaxCapacity = 20,
+        MechanicsItem = true,
+        WorldStaticModel = STORAGENAME,
+    }
+
+
+
+    item Bone_Bullbar
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 8.0,
+        ItemType = base:normal,
+        Icon = icobullbar,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Bone_HoodArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 8.0,
+        ItemType = base:normal,
+        Icon = icoBone,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Bone_WindshieldArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 8.0,
+        ItemType = base:normal,
+        Icon = icoBone,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Bone_DoorArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 8.0,
+        ItemType = base:normal,
+        Icon = icoBone,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Bone_WindowArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 8.0,
+        ItemType = base:normal,
+        Icon = icoBone,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Bone_TrunkArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 8.0,
+        ItemType = base:normal,
+        Icon = icoBone,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Bone_TruckBedCover
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 8.0,
+        ItemType = base:normal,
+        Icon = icoStorage,
+        ConditionMax = 100,
+        ConditionAffectsCapacity = false,
+        MaxCapacity = 40,
+        MechanicsItem = true,
+        WorldStaticModel = STORAGENAME,
+    }
+    item Bone_RoofRack
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 8.0,
+        ItemType = base:normal,
+        Icon = icoStorage,
+        ConditionMax = 100,
+        ConditionAffectsCapacity = false,
+        MaxCapacity = 40,
+        MechanicsItem = true,
+        WorldStaticModel = STORAGENAME,
+    }
+
+
+
+    item Scrap_Bullbar
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 12.0,
+        ItemType = base:normal,
+        Icon = icobullbar,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Scrap_HoodArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 12.0,
+        ItemType = base:normal,
+        Icon = icoScrap,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Scrap_WindshieldArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 12.0,
+        ItemType = base:normal,
+        Icon = icoScrap,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Scrap_DoorArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 12.0,
+        ItemType = base:normal,
+        Icon = icoScrap,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Scrap_WindowArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 12.0,
+        ItemType = base:normal,
+        Icon = icoScrap,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Scrap_TrunkArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 12.0,
+        ItemType = base:normal,
+        Icon = icoScrap,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Scrap_TruckBedCover
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 12.0,
+        ItemType = base:normal,
+        Icon = icoStorage,
+        ConditionMax = 100,
+        ConditionAffectsCapacity = false,
+        MaxCapacity = 60,
+        MechanicsItem = true,
+        WorldStaticModel = STORAGENAME,
+    }
+    item Scrap_RoofRack
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 12.0,
+        ItemType = base:normal,
+        Icon = icoStorage,
+        ConditionMax = 100,
+        ConditionAffectsCapacity = false,
+        MaxCapacity = 60,
+        MechanicsItem = true,
+        WorldStaticModel = STORAGENAME,
+    }
+
+
+
+    item Light_Bullbar
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icobullbar,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Light_HoodArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoLight,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Light_WindshieldArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoLight,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Light_DoorArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoLight,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Light_WindowArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoLight,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Light_TrunkArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoLight,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Light_TruckBedCover
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoStorage,
+        ConditionMax = 100,
+        ConditionAffectsCapacity = false,
+        MaxCapacity = 80,
+        MechanicsItem = true,
+        WorldStaticModel = STORAGENAME,
+    }
+    item Light_RoofRack
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoStorage,
+        ConditionMax = 100,
+        ConditionAffectsCapacity = false,
+        MaxCapacity = 80,
+        MechanicsItem = true,
+        WorldStaticModel = STORAGENAME,
+    }
+
+
+
+    item Heavy_Bullbar
+    {
+        DisplayCategory = VehicleArmour,
         Weight = 15.0,
         ItemType = base:normal,
         Icon = icobullbar,
-        VehicleType = 1,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = static_bullbar,
+        WorldStaticModel = ARMOURNAME,
     }
-    item T2Bullbar
+    item Heavy_HoodArmour
     {
-        DisplayCategory = VehicleMaintenance,
+        DisplayCategory = VehicleArmour,
         Weight = 15.0,
         ItemType = base:normal,
-        Icon = icobullbar,
-        VehicleType = 1,
+        Icon = icoHeavy,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = static_bullbar,
+        WorldStaticModel = ARMOURNAME,
     }
-    item T3Bullbar
+    item Heavy_WindshieldArmour
     {
-        DisplayCategory = VehicleMaintenance,
+        DisplayCategory = VehicleArmour,
         Weight = 15.0,
         ItemType = base:normal,
-        Icon = icobullbar,
-        VehicleType = 1,
+        Icon = icoHeavy,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = static_bullbar,
+        WorldStaticModel = ARMOURNAME,
     }
-    item T4Bullbar
+    item Heavy_DoorArmour
     {
-        DisplayCategory = VehicleMaintenance,
+        DisplayCategory = VehicleArmour,
         Weight = 15.0,
         ItemType = base:normal,
-        Icon = icobullbar,
-        VehicleType = 1,
+        Icon = icoHeavy,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = static_bullbar,
+        WorldStaticModel = ARMOURNAME,
     }
-    item ARMOURITEM
+    item Heavy_WindowArmour
     {
-        DisplayCategory = VehicleMaintenance,
+        DisplayCategory = VehicleArmour,
         Weight = 15.0,
         ItemType = base:normal,
-        Icon = icoARMOURITEM,
-        VehicleType = 1,
+        Icon = icoHeavy,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = static_ARMOURITEM,
+        WorldStaticModel = ARMOURNAME,
     }
-    item STORAGEITEM
+    item Heavy_TrunkArmour
     {
-        DisplayCategory = VehicleMaintenance,
+        DisplayCategory = VehicleArmour,
         Weight = 15.0,
         ItemType = base:normal,
-        Icon = icoSTORAGEITEM,
-        VehicleType = 1,
+        Icon = icoHeavy,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Heavy_TruckBedCover
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 15.0,
+        ItemType = base:normal,
+        Icon = icoStorage,
         ConditionMax = 100,
         ConditionAffectsCapacity = false,
         MaxCapacity = 100,
         MechanicsItem = true,
-        WorldStaticModel = static_STORAGEITEM,
+        WorldStaticModel = STORAGENAME,
+    }
+    item Heavy_RoofRack
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 15.0,
+        ItemType = base:normal,
+        Icon = icoStorage,
+        ConditionMax = 100,
+        ConditionAffectsCapacity = false,
+        MaxCapacity = 100,
+        MechanicsItem = true,
+        WorldStaticModel = STORAGENAME,
+    }
+
+
+
+    item Light_TireChain
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoLight,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Heavy_TireChain
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 15.0,
+        ItemType = base:normal,
+        Icon = icoHeavy,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+
+
+
+    item Light_TrailerArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 10.0,
+        ItemType = base:normal,
+        Icon = icoLight,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item Heavy_TrailerArmour
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 15.0,
+        ItemType = base:normal,
+        Icon = icoHeavy,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+
+
+
+    item ARMOURITEM
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 15.0,
+        ItemType = base:normal,
+        Icon = icoARMOURITEM,
+        ConditionMax = 100,
+        MechanicsItem = true,
+        WorldStaticModel = ARMOURNAME,
+    }
+    item STORAGEITEM
+    {
+        DisplayCategory = VehicleArmour,
+        Weight = 15.0,
+        ItemType = base:normal,
+        Icon = icoSTORAGEITEM,
+        ConditionMax = 100,
+        ConditionAffectsCapacity = false,
+        MaxCapacity = 100,
+        MechanicsItem = true,
+        WorldStaticModel = STORAGENAME,
     }
 }

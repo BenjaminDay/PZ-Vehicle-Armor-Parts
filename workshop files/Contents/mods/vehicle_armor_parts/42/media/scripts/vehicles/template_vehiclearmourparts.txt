@@ -4,28 +4,33 @@ module Base
     {
         part Armour_Bullbar
         {
-			model T1Bullbar
+			model Wood_Bullbar
 				{
-                	file = T1Bullbar,
+                	file = Wood_Bullbar,
                     offset = 0.0 -0.2 1.2,
 				}
-            model T2Bullbar
+            model Bone_Bullbar
 				{
-                	file = T2Bullbar,
+                	file = Bone_Bullbar,
                     offset = 0.0 -0.2 1.2,
 				}
-            model T3Bullbar
+            model Scrap_Bullbar
 				{
-                	file = T3Bullbar,
+                	file = Scrap_Bullbar,
                     offset = 0.0 -0.2 1.2,
 				}
-            model T4Bullbar
+            model Light_Bullbar
 				{
-                	file = T4Bullbar,
+                	file = Light_Bullbar,
+                    offset = 0.0 -0.2 1.2,
+				}
+            model Heavy_Bullbar
+				{
+                	file = Heavy_Bullbar,
                     offset = 0.0 -0.2 1.2,
 				}
 			area = Engine,
-            itemType = Base.T1Bullbar;Base.T2Bullbar;Base.T3Bullbar;Base.T4Bullbar,
+            itemType = Base.Wood_Bullbar;Base.Bone_Bullbar;Base.Scrap_Bullbar;Base.Light_Bullbar;Base.Heavy_Bullbar,
         }
 
         part Armour_Hood
@@ -36,7 +41,7 @@ module Base
 				}
             parent = EngineDoor,
 			area = Engine,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_HoodArmour;Base.Bone_HoodArmour;Base.Scrap_HoodArmour;Base.Light_HoodArmour;Base.Heavy_HoodArmour,
         }
 
         part Armour_Windshield
@@ -47,7 +52,7 @@ module Base
 				}
             parent = Windshield,
 			area = Engine,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_WindshieldArmour;Base.Bone_WindshieldArmour;Base.Scrap_WindshieldArmour;Base.Light_WindshieldArmour;Base.Heavy_WindshieldArmour,
         }
 
         part Armour_Trunk
@@ -58,7 +63,7 @@ module Base
 				}
             parent = TrunkDoor,
 			area = TruckBed,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_TrunkArmour;Base.Bone_TrunkArmour;Base.Scrap_TrunkArmour;Base.Light_TrunkArmour;Base.Heavy_TrunkArmour,
         }
 
         part Armour_WindshieldRear
@@ -69,7 +74,7 @@ module Base
 				}
             parent = WindshieldRear,
 			area = TruckBed,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_WindshieldArmour;Base.Bone_WindshieldArmour;Base.Scrap_WindshieldArmour;Base.Light_WindshieldArmour;Base.Heavy_WindshieldArmour,
         }
 
         part Armour_DoorFrontLeft
@@ -80,7 +85,7 @@ module Base
 				}
             parent = DoorFrontLeft,
 			area = SeatFrontLeft,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_DoorArmour;Base.Bone_DoorArmour;Base.Scrap_DoorArmour;Base.Light_DoorArmour;Base.Heavy_DoorArmour,
         }
 
         part Armour_DoorFrontRight
@@ -91,7 +96,7 @@ module Base
 				}
             parent = DoorFrontRight,
 			area = SeatFrontRight,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_DoorArmour;Base.Bone_DoorArmour;Base.Scrap_DoorArmour;Base.Light_DoorArmour;Base.Heavy_DoorArmour,
         }
 
         part Armour_WindowFrontLeft
@@ -102,7 +107,7 @@ module Base
 				}
             parent = WindowFrontLeft,
 			area = SeatFrontLeft,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_WindowArmour;Base.Bone_WindowArmour;Base.Scrap_WindowArmour;Base.Light_WindowArmour;Base.Heavy_WindowArmour,
         }
 
         part Armour_WindowFrontRight
@@ -113,7 +118,7 @@ module Base
 				}
             parent = WindowFrontRight,
 			area = SeatFrontRight,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_WindowArmour;Base.Bone_WindowArmour;Base.Scrap_WindowArmour;Base.Light_WindowArmour;Base.Heavy_WindowArmour,
         }
 
         part Armour_DoorRearLeft
@@ -124,7 +129,7 @@ module Base
 				}
             parent = DoorRearLeft,
 			area = SeatRearLeft,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_DoorArmour;Base.Bone_DoorArmour;Base.Scrap_DoorArmour;Base.Light_DoorArmour;Base.Heavy_DoorArmour,
         }
 
         part Armour_DoorRearRight
@@ -135,7 +140,7 @@ module Base
 				}
             parent = DoorRearRight,
 			area = SeatRearRight,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_DoorArmour;Base.Bone_DoorArmour;Base.Scrap_DoorArmour;Base.Light_DoorArmour;Base.Heavy_DoorArmour,
         }
 
         part Armour_WindowRearLeft
@@ -146,7 +151,7 @@ module Base
 				}
             parent = WindowRearLeft,
 			area = SeatRearLeft,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_WindowArmour;Base.Bone_WindowArmour;Base.Scrap_WindowArmour;Base.Light_WindowArmour;Base.Heavy_WindowArmour,
         }
 
         part Armour_WindowRearRight
@@ -157,7 +162,7 @@ module Base
 				}
             parent = WindowRearRight,
 			area = SeatRearRight,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_WindowArmour;Base.Bone_WindowArmour;Base.Scrap_WindowArmour;Base.Light_WindowArmour;Base.Heavy_WindowArmour,
         }
 
         part Armour_DoorMiddleLeft
@@ -168,7 +173,7 @@ module Base
 				}
             parent = DoorMiddleLeft,
 			area = SeatMiddleLeft,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_DoorArmour;Base.Bone_DoorArmour;Base.Scrap_DoorArmour;Base.Light_DoorArmour;Base.Heavy_DoorArmour,
         }
 
         part Armour_DoorMiddleRight
@@ -179,7 +184,7 @@ module Base
 				}
             parent = DoorMiddleRight,
 			area = SeatMiddleRight,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_DoorArmour;Base.Bone_DoorArmour;Base.Scrap_DoorArmour;Base.Light_DoorArmour;Base.Heavy_DoorArmour,
         }
 
         part Armour_WindowMiddleLeft
@@ -190,7 +195,7 @@ module Base
 				}
             parent = WindowMiddleLeft,
 			area = SeatMiddleLeft,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_WindowArmour;Base.Bone_WindowArmour;Base.Scrap_WindowArmour;Base.Light_WindowArmour;Base.Heavy_WindowArmour,
         }
 
         part Armour_WindowMiddleRight
@@ -201,7 +206,7 @@ module Base
 				}
             parent = WindowMiddleRight,
 			area = SeatMiddleRight,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Wood_WindowArmour;Base.Bone_WindowArmour;Base.Scrap_WindowArmour;Base.Light_WindowArmour;Base.Heavy_WindowArmour,
         }
 
         part Armour_Trailer
@@ -211,7 +216,7 @@ module Base
                 	file = ARMOURNAME,
 				}
 			area = TruckBed,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Light_TrailerArmour;Base.Heavy_TrailerArmour,
         }
 
         part Armour_*
@@ -219,6 +224,7 @@ module Base
             category = armour,
             specificItem = false,
             mechanicRequireKey = false,
+            repairMechanic = true,
             table install
             {
                 items
@@ -313,8 +319,9 @@ module Base
 				}
             category = tire,
             specificItem = false,
-            itemType = Base.ARMOURITEM,
+            itemType = Base.Light_TireChain;Base.Heavy_TireChain,
             mechanicRequireKey = false,
+            repairMechanic = true,
             table install
             {
                 items
@@ -380,7 +387,7 @@ module Base
                     offset = 0.0 0.5 0.0,
 				}
 			area = Roof,
-            itemType = Base.STORAGEITEM,
+            itemType = Base.Wood_RoofRack;Base.Bone_RoofRack;Base.Scrap_RoofRack;Base.Light_RoofRack;Base.Heavy_RoofRack,
         }
 
         part Storage_TruckBedCover
@@ -391,7 +398,7 @@ module Base
                     offset = 0.0 0.5 0.0,
 				}
 			area = TruckBed,
-            itemType = Base.STORAGEITEM,
+            itemType = Base.Wood_TruckBedCover;Base.Bone_TruckBedCover;Base.Scrap_TruckBedCover;Base.Light_TruckBedCover;Base.Heavy_TruckBedCover,
         }
 
         part Storage_*

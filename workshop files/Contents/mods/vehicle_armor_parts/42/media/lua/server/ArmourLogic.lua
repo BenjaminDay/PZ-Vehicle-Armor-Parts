@@ -16,11 +16,11 @@ Vehicles.Update = Vehicles.Update or {}
 -- ============================================================================
 local dmgPartMultiplier = 0.5
 local durabilityTiers = {
-    T1 = 0.75,
-    T2 = 1.0,
-    T3 = 1.5,
-    T4 = 2.0,
-    T5 = 2.5,
+    Wood = 0.75,
+    Bone = 1.0,
+    Scrap = 1.2,
+    Light = 1.5,
+    Heavy = 2.5,
 }
 
 -- list armour part IDs, their ModData key, and part damage multipliers here
@@ -462,10 +462,11 @@ local armourVisuals =
 {
     Armour_Bullbar =
     {
-        ["Base.T1Bullbar"] = "T1Bullbar",
-        ["Base.T2Bullbar"] = "T2Bullbar",
-        ["Base.T3Bullbar"] = "T3Bullbar",
-        ["Base.T4Bullbar"] = "T4Bullbar",
+        ["Base.Wood_Bullbar"] = "Wood_Bullbar",
+        ["Base.Bone_Bullbar"] = "Bone_Bullbar",
+        ["Base.Scrap_Bullbar"] = "Scrap_Bullbar",
+        ["Base.Light_Bullbar"] = "Light_Bullbar",
+        ["Base.Heavy_Bullbar"] = "Heavy_Bullbar",
     },
 }
 

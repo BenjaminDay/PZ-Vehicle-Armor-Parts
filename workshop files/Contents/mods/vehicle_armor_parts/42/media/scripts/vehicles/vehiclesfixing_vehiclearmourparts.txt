@@ -1,0 +1,55 @@
+module Base
+{
+    fixing Fix Wood Armour
+    {
+        Require = Base.Wood_Bullbar;Base.Wood_HoodArmour;Base.Wood_WindshieldArmour;Base.Wood_DoorArmour;Base.Wood_WindowArmour;Base.Wood_TrunkArmour;Base.Wood_TruckBedCover;Base.Wood_RoofRack,
+        GlobalItem = Base.Nails=5,
+        ConditionModifier = 0.3,
+        Fixer = Base.Log=1; Woodwork=3;Mechanics=2,
+        Fixer = Base.Plank=2; Woodwork=3;Mechanics=2,
+    }
+
+    fixing Fix Bone Armour
+    {
+        Require = Base.Bone_Bullbar;Base.Bone_HoodArmour;Base.Bone_WindshieldArmour;Base.Bone_DoorArmour;Base.Bone_WindowArmour;Base.Bone_TrunkArmour;Base.Bone_TruckBedCover;Base.Bone_RoofRack,
+        GlobalItem = Base.LeatherStrips=5,
+        ConditionModifier = 0.4,
+        Fixer = Base.LargeAnimalBone=2; Carving=3;Mechanics=2,
+        Fixer = Base.AnimalBone=2; Carving=3;Mechanics=2,
+    }
+
+    fixing Fix Scrap Armour
+    {
+        Require = Base.Scrap_Bullbar;Base.Scrap_HoodArmour;Base.Scrap_WindshieldArmour;Base.Scrap_DoorArmour;Base.Scrap_WindowArmour;Base.Scrap_TrunkArmour;Base.Scrap_TruckBedCover;Base.Scrap_RoofRack,
+        GlobalItem = Base.BlowTorch=5,
+        ConditionModifier = 0.5,
+        Fixer = Base.ScrapMetal=4; MetalWelding=3;Mechanics=2,
+        Fixer = Base.SteelScrap=4; MetalWelding=3;Mechanics=2,
+        Fixer = Base.IronScrap=4; MetalWelding=3;Mechanics=2,
+    }
+
+    fixing Fix Light Armour
+    {
+        Require = Base.Light_TrailerArmour;Base.Light_Bullbar;Base.Light_HoodArmour;Base.Light_WindshieldArmour;Base.Light_DoorArmour;Base.Light_WindowArmour;Base.Light_TrunkArmour;Base.Light_TruckBedCover;Base.Light_RoofRack,
+        GlobalItem = Base.BlowTorch=6,
+        ConditionModifier = 0.6,
+        Fixer = Base.IronBarHalf=2; MetalWelding=4;Mechanics=2,
+    }
+
+    fixing Fix Heavy Armour
+    {
+        Require = Base.Heavy_TrailerArmour;Base.Heavy_Bullbar;Base.Heavy_HoodArmour;Base.Heavy_WindshieldArmour;Base.Heavy_DoorArmour;Base.Heavy_WindowArmour;Base.Heavy_TrunkArmour;Base.Heavy_TruckBedCover;Base.Heavy_RoofRack,
+        GlobalItem = Base.BlowTorch=8,
+        ConditionModifier = 0.8,
+        Fixer = Base.SheetMetal=2; MetalWelding=5;Mechanics=2,
+        Fixer = Base.SmallSheetMetal=6; MetalWelding=5;Mechanics=2,
+    }
+
+    fixing Fix Tire Chain
+    {
+        Require = Base.Light_TireChain;Base.Heavy_TireChain,
+        GlobalItem = Base.BlowTorch=2,
+        ConditionModifier = 0.2,
+        Fixer = Base.Wire=2; MetalWelding=3;Mechanics=2,
+    }
+}

@@ -1,35 +1,41 @@
 module Base
 {
-    model T1Bullbar
+    model Wood_Bullbar
     {
         mesh = vehicles/Vehicles_Bullbar,
         texture = Vehicles/Vehicles_vehiclearmourparts,
         scale = 1,
     }
-    model T2Bullbar
+    model Bone_Bullbar
+    {
+        mesh = vehicles/Vehicles_Bullbar,
+        texture = Vehicles/Vehicles_vehiclearmourparts,
+        scale = 1.5,
+    }
+    model Scrap_Bullbar
     {
         mesh = vehicles/Vehicles_Bullbar,
         texture = Vehicles/Vehicles_vehiclearmourparts,
         scale = 2,
     }
-    model T3Bullbar
+    model Light_Bullbar
+    {
+        mesh = vehicles/Vehicles_Bullbar,
+        texture = Vehicles/Vehicles_vehiclearmourparts,
+        scale = 2.5,
+    }
+    model Heavy_Bullbar
     {
         mesh = vehicles/Vehicles_Bullbar,
         texture = Vehicles/Vehicles_vehiclearmourparts,
         scale = 3,
-    }    
-    model T4Bullbar
-    {
-        mesh = vehicles/Vehicles_Bullbar,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
-        scale = 4,
     }
     model ARMOURNAME
     {
         mesh = vehicles/Vehicles_ARMOURMODEL,
         texture = Vehicles/Vehicles_vehiclearmourparts,
         scale = 1,
-    }	
+    }
     model STORAGENAME
     {
         mesh = vehicles/Vehicles_STORAGEMODEL,

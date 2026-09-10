@@ -13,17 +13,19 @@ Done:
 - LUA Automation to work out what vehicles get RoofRacks
 - LUA to add Area for RoofRack Interaction
 - LUA for swappable models based on the item installed (currently only 1 model is loaded)
+- Create the items and recipes for all the armour parts
+- Repair script so parts can be fixed on the go
 
 In Progress:
 - Modelling / texturing (I have some help thankfully from chayeeneek, seriously thank you!)
 
 
 Things still on the to do list:
-- Create the items and recipes for all the armour parts
-- Add recipe magazine
-- Repair script so parts can be fixed on the go
 - Offsetting the part models onto the different vehicle meshes themselves
 - LUA update the injector to use part model offsets
+- Prevent some parts being uninstalled when armour is present e.g. tires if tirechains
+- Drop Tirechain in the event of a blowout
+- Add recipe magazine (maybe)
 - Even more stress testing
 - Testing on a locally hosted MP server as well as testing it with bolo loadout
 - Investigate if we can bake engine condition repair into the mod (and other unfixable parts)

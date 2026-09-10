@@ -1,6 +1,7 @@
 {
     "IGUI_VehiclePartCatarmour": "Armor",
     "IGUI_CraftingCategories_VehicleArmour": "Vehicle Armor",
+    "IGUI_ItemCat_VehicleArmour": "Vehicle Armor",
 	
 	"IGUI_VehiclePartArmour_Bullbar": "Bullbar",
 	"IGUI_VehiclePartArmour_Hood": "Hood Armor",

@@ -1,14 +1,15 @@
 version=1
 id=
 title=Vehicle Armor Parts
-description=A mod that adds installable vehicle armor parts to vehicles
+description=A WIP mod that adds installable vehicle armor parts to vehicles
 description=
 description=This mod is inspired by those that came before it, mainly SVU3 and KI5's approach to armor.
 description=AI was also used in a research capacity during the making of this mod.
-description=The assets, code and everything in this mod is original and created by hand however. (End the slop please)
+description=The assets, code and everything in this mod is original and created by hand however. (End the AI slop please)
 description=
 description=This mod was created primarily for SpaghettiZ's Bolognese server but anyone is welcome to use it and repack it in their own server mods.
 description=
 description=Join Bolognese here - https://discord.gg/fhbA3vnrr9
+description=Github link - https://github.com/BenjaminDay/PZ-Vehicle-Armor-Parts
 tags=Build 42
 visibility=private
