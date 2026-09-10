@@ -372,8 +372,8 @@ module Base
             }
             lua
             {
-                init = Vehicles.Update.Armour,
-                update = Vehicles.Init.Model,
+                init = Vehicles.Init.Model,
+                update = Vehicles.Update.Armour,
             }
         }
     }

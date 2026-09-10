@@ -25,6 +25,7 @@ Things still on the to do list:
 - LUA update the injector to use part model offsets
 - Prevent some parts being uninstalled when armour is present e.g. tires if tirechains
 - Drop Tirechain in the event of a blowout
+- Sandbox settings
 - Add recipe magazine (maybe)
 - Even more stress testing
 - Testing on a locally hosted MP server as well as testing it with bolo loadout
