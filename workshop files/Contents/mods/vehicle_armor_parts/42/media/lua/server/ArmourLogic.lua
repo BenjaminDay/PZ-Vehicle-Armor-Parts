@@ -11,143 +11,19 @@
 Vehicles = Vehicles or {}
 Vehicles.Update = Vehicles.Update or {}
 
+local lookuptable = require("VAPlookuptables")
+
 -- ============================================================================
 -- CONFIG
 -- ============================================================================
-local dmgPartMultiplier = 0.5
-local durabilityTiers = {
-    Wood = 0.75,
-    Bone = 1.0,
-    Scrap = 1.2,
-    Light = 1.5,
-    Heavy = 2.5,
-}
 
--- list armour part IDs, their ModData key, and part damage multipliers here
-local armourParts =
-{
-    Armour_Bullbar =
-    {
-        ["EngineDoor"] = {"Armour_LastHoodCondition", dmgPartMultiplier},
-        ["Engine"] = {"Armour_LastEngineCondition", dmgPartMultiplier},
-        ["HeadlightLeft"] = {"Armour_LastHLLCondition", dmgPartMultiplier / 5},
-        ["HeadlightRight"] = {"Armour_LastHLRCondition", dmgPartMultiplier / 5},
-        ["Armour_Hood"] = {"Armour_LastAHoodCondition", 1},
-    },
-
-    Armour_Hood =
-    {
-        ["EngineDoor"] = {"Armour_LastHoodCondition", dmgPartMultiplier},
-        ["Engine"] = {"Armour_LastEngineCondition", dmgPartMultiplier},
-    },
-
-    Armour_Trunk =
-    {
-        ["TrunkDoor"] = {"Armour_LastTrunkDCondition", dmgPartMultiplier},
-        ["Trunk"] = {"Armour_LastTrunkCondition", dmgPartMultiplier},
-    },
-
-    Armour_Windshield =
-    {
-        ["Windshield"] = {"Armour_LastWCondition", dmgPartMultiplier},
-    },
-
-    Armour_WindshieldRear =
-    {
-        ["WindshieldRear"] = {"Armour_LastWRCondition", dmgPartMultiplier},
-    },
-
-    Armour_DoorFrontLeft =
-    {
-        ["DoorFrontLeft"] = {"Armour_LastDFLCondition", dmgPartMultiplier},
-    },
-
-    Armour_DoorFrontRight =
-    {
-        ["DoorFrontRight"] = {"Armour_LastDFRCondition", dmgPartMultiplier},
-    },
-
-    Armour_DoorRearLeft =
-    {
-        ["DoorRearLeft"] = {"Armour_LastDRLCondition", dmgPartMultiplier},
-    },
-
-    Armour_DoorRearRight =
-    {
-        ["DoorRearRight"] = {"Armour_LastDRRCondition", dmgPartMultiplier},
-    },
-
-    Armour_DoorMiddleLeft =
-    {
-        ["DoorMiddleLeft"] = {"Armour_LastDMLCondition", dmgPartMultiplier},
-    },
-
-    Armour_DoorMiddleRight =
-    {
-        ["DoorMiddleRight"] = {"Armour_LastDMRCondition", dmgPartMultiplier},
-    },
-
-    Armour_WindowFrontLeft =
-    {
-        ["WindowFrontLeft"] = {"Armour_LastWFLCondition", dmgPartMultiplier},
-    },
-
-    Armour_WindowFrontRight =
-    {
-        ["WindowFrontRight"] = {"Armour_LastWFRCondition", dmgPartMultiplier},
-    },
-
-    Armour_WindowRearLeft =
-    {
-        ["WindowRearLeft"] = {"Armour_LastWRLCondition", dmgPartMultiplier},
-    },
-
-    Armour_WindowRearRight =
-    {
-        ["WindowRearRight"] = {"Armour_LastWRRCondition", dmgPartMultiplier},
-    },
-
-    Armour_WindowMiddleLeft =
-    {
-        ["WindowMiddleLeft"] = {"Armour_LastWMLCondition", dmgPartMultiplier},
-    },
-
-    Armour_WindowMiddleRight =
-    {
-        ["WindowMiddleRight"] = {"Armour_LastWMRCondition", dmgPartMultiplier},
-    },
-
-    Armour_Trailer =
-    {
-        ["TrailerTrunk"] = {"Armour_LastTrailerTrunkCondition", dmgPartMultiplier},
-    },
-
-    TireChainFrontLeft =
-    {
-        ["TireFrontLeft"] = {"Armour_LastTFLCondition", dmgPartMultiplier},
-    },
-
-    TireChainFrontRight =
-    {
-        ["TireFrontRight"] = {"Armour_LastTFRCondition", dmgPartMultiplier},
-    },
-
-    TireChainRearLeft =
-    {
-        ["TireRearLeft"] = {"Armour_LastTRLCondition", dmgPartMultiplier},
-    },
-
-    TireChainRearRight =
-    {
-        ["TireRearRight"] = {"Armour_LastTRRCondition", dmgPartMultiplier},
-    },
-}
 
 local DEBUG = true
+local forceOverrideModelDEBUG = true
 
-local function ArmourDebug(message)
+local function VAPDebug(message)
     if DEBUG then
-        print("[Armour] " .. tostring(message))
+        print("[VAP] " .. tostring(message))
     end
 end
 
@@ -175,7 +51,7 @@ local function GetPartCondition(part, armour, dataKey)
     if previousCondition == nil then
         modData[dataKey] = currentCondition
 
-        ArmourDebug(
+        VAPDebug(
             "Initialised "
             .. tostring(part:getId())
             .. " at "
@@ -239,14 +115,14 @@ local function CalculateAbsorption(damage, armourCondition, dmgMultiplier, invID
     -- get armour durabilty from installed part name
     local durability = 1.0
 
-    for armourTier, multiplier in pairs(durabilityTiers) do
+    for armourTier, multiplier in pairs(lookuptable.durabilityTiers) do
         if string.find(invID, armourTier, 1, true) then
             durability = multiplier
             break
         end
     end
 
-    ArmourDebug(
+    VAPDebug(
         tostring(invID)
         .. " durability: "
         .. tostring(durability)
@@ -328,7 +204,7 @@ local function ProcessProtectedPart(vehicle, armour, protectedPart, dataKey, dmg
         return armourCondition
     end
 
-    ArmourDebug(
+    VAPDebug(
         tostring(protectedPart:getId())
         .. " damage detected: "
         .. tostring(damageData.damage)
@@ -347,7 +223,7 @@ local function ProcessProtectedPart(vehicle, armour, protectedPart, dataKey, dmg
     if absorption.absorbedDamage <= 0 then
         armour:getModData()[dataKey] = damageData.currentCondition
 
-        ArmourDebug(
+        VAPDebug(
             tostring(protectedPart:getId())
             .. " damage passes through; armour is broken."
         )
@@ -365,7 +241,7 @@ local function ProcessProtectedPart(vehicle, armour, protectedPart, dataKey, dmg
     -- apply damage to armour condition
     SetPartCondition(vehicle, armour, absorption.newArmourCondition)
 
-    ArmourDebug(
+    VAPDebug(
         tostring(protectedPart:getId())
         .. " | absorbed = "
         .. tostring(absorption.absorbedDamage)
@@ -386,11 +262,11 @@ end
 -- ============================================================================
 local function ArmourInstallComplete(vehicle, part, protectedParts)
 
-    if not vehicle or not part then return end
+    if not vehicle or not part or not protectedParts then return end
 
     local armourData = part:getModData()
 
-    ArmourDebug("Armour installed - establishing protected-part baselines")
+    VAPDebug("Armour installed - establishing protected-part baselines")
 
     for partID, data in pairs(protectedParts) do
 
@@ -402,7 +278,7 @@ local function ArmourInstallComplete(vehicle, part, protectedParts)
 
             armourData[dataKey] = condition
 
-            ArmourDebug(
+            VAPDebug(
                 "Baseline "
                 .. tostring(partID)
                 .. " = "
@@ -414,7 +290,7 @@ end
 
 local function ArmourUninstallComplete(vehicle, part, item, protectedParts)
 
-    if not part then return end
+    if not part or not protectedParts then return end
 
     local armourData = part:getModData()
 
@@ -422,7 +298,7 @@ local function ArmourUninstallComplete(vehicle, part, item, protectedParts)
         armourData[data[1]] = nil
     end
 
-    ArmourDebug("Armour uninstalled - cleared protected-part baselines")
+    VAPDebug("Armour uninstalled - cleared protected-part baselines")
 end
 
 -- ============================================================================
@@ -432,7 +308,7 @@ end
 local function VehicleArmourUpdate(vehicle, part, protectedParts)
 
     if isClient() and not isServer() then return end
-    if not vehicle or not part then return end
+    if not vehicle or not part or not protectedParts then return end
 
     -- if armour not installed
     if not part:getInventoryItem() then return end
@@ -457,21 +333,10 @@ end
 -- MODEL HANDLER
 -- ============================================================================
 
--- item name to loaded model file name mapping
-local armourVisuals =
-{
-    Armour_Bullbar =
-    {
-        ["Base.Wood_Bullbar"] = "Wood_Bullbar",
-        ["Base.Bone_Bullbar"] = "Bone_Bullbar",
-        ["Base.Scrap_Bullbar"] = "Scrap_Bullbar",
-        ["Base.Light_Bullbar"] = "Light_Bullbar",
-        ["Base.Heavy_Bullbar"] = "Heavy_Bullbar",
-    },
-}
-
 local function SetArmourModelVisible(part)
-    local visuals = armourVisuals[part:getId()]
+    if not part then return end
+    local partData = lookuptable.armourTable[part:getId()]
+    local visuals = partData.visuals
     if not visuals then return end
 
     local installedModel = false
@@ -480,8 +345,15 @@ local function SetArmourModelVisible(part)
         installedModel = visuals[item:getFullType()] or false
     end
 
-    for _, modelName in pairs(visuals) do
-        part:setModelVisible(modelName, modelName == installedModel)
+    if forceOverrideModelDEBUG then
+        for _, modelName in pairs(visuals) do
+            part:setModelVisible(modelName, true)
+        end
+
+    else
+        for _, modelName in pairs(visuals) do
+            part:setModelVisible(modelName, modelName == installedModel)
+        end
     end
 end
 
@@ -494,24 +366,24 @@ Vehicles.Init.Model = function(vehicle, part)
 end
 
 Vehicles.InstallComplete.Armour = function(vehicle, part)
-    local parts = armourParts[part:getId()]
-    if not parts then return end
+    local partData = lookuptable.armourTable[part:getId()]
+    local protectedParts = partData.protectionData
 
-    ArmourInstallComplete(vehicle, part, parts)
+    ArmourInstallComplete(vehicle, part, protectedParts)
     SetArmourModelVisible(part)
 end
 
 Vehicles.UninstallComplete.Armour = function(vehicle, part, item)
-    local parts = armourParts[part:getId()]
-    if not parts then return end
+    local partData = lookuptable.armourTable[part:getId()]
+    local protectedParts = partData.protectionData
 
-    ArmourUninstallComplete(vehicle, part, item, parts)
+    ArmourUninstallComplete(vehicle, part, item, protectedParts)
     SetArmourModelVisible(part)
 end
 
 Vehicles.Update.Armour = function(vehicle, part)
-    local parts = armourParts[part:getId()]
-    if not parts then return end
+    local partData = lookuptable.armourTable[part:getId()]
+    local protectedParts = partData.protectionData
 
-    VehicleArmourUpdate(vehicle, part, parts)
+    VehicleArmourUpdate(vehicle, part, protectedParts)
 end

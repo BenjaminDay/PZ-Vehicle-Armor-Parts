@@ -8,7 +8,7 @@ module Base
         Icon = icobullbar,
         ConditionMax = 100,
         MechanicsItem = true,
-        WorldStaticModel = ARMOURNAME,
+        WorldStaticModel = Wood_Bullbar,
     }
     item Wood_HoodArmour
     {

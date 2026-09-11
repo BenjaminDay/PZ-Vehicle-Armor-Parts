@@ -30,85 +30,85 @@ module Base
     model CarNormal_Bone_Bullbar
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_bullbar_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_HoodArmour
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_hood_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_WindshieldArmour
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_windshield_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_TrunkArmour
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_trunk_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_WindshieldRearArmour
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_rear_windshield_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_DoorFrontLeftArmour
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_front_left_door_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_DoorFrontRightArmour
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_front_right_door_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_WindowFrontLeftArmour
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_front_left_window_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_WindowFrontRightArmour
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_front_right_window_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_DoorRearLeftArmour
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_rear_left_door_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_DoorRearRightArmour
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_rear_right_door_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_WindowRearLeftArmour
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_rear_left_window_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_WindowRearRightArmour
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_rear_right_window_armor,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
     model CarNormal_Bone_RoofRack
     {
         mesh = vehicles/Vehicles_CarNormal_Bone|normal_bone_roofrack,
-        texture = Vehicles/Vehicles_vehiclearmourparts,
+        texture = Vehicles/Vehicles_bonearmourparts,
         scale = 1,
     }
 

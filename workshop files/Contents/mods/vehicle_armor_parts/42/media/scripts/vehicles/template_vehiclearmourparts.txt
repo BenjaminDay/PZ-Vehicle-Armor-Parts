@@ -4,41 +4,12 @@ module Base
     {
         part Armour_Bullbar
         {
-			model Wood_Bullbar
-				{
-                	file = Wood_Bullbar,
-                    offset = 0.0 -0.2 1.2,
-				}
-            model Bone_Bullbar
-				{
-                	file = CarNormal_Bone_Bullbar,
-                    offset = 0.0 0.0 0.0,
-				}
-            model Scrap_Bullbar
-				{
-                	file = Scrap_Bullbar,
-                    offset = 0.0 -0.2 1.2,
-				}
-            model Light_Bullbar
-				{
-                	file = Light_Bullbar,
-                    offset = 0.0 -0.2 1.2,
-				}
-            model Heavy_Bullbar
-				{
-                	file = Heavy_Bullbar,
-                    offset = 0.0 -0.2 1.2,
-				}
 			area = Engine,
             itemType = Base.Wood_Bullbar;Base.Bone_Bullbar;Base.Scrap_Bullbar;Base.Light_Bullbar;Base.Heavy_Bullbar,
         }
 
         part Armour_Hood
         {
-			model HoodArmour
-				{
-                	file = CarNormal_Bone_HoodArmour,
-				}
             parent = EngineDoor,
 			area = Engine,
             itemType = Base.Wood_HoodArmour;Base.Bone_HoodArmour;Base.Scrap_HoodArmour;Base.Light_HoodArmour;Base.Heavy_HoodArmour,
@@ -46,10 +17,6 @@ module Base
 
         part Armour_Windshield
         {
-			model WindshieldArmour
-				{
-                	file = CarNormal_Bone_WindshieldArmour,
-				}
             parent = Windshield,
 			area = Engine,
             itemType = Base.Wood_WindshieldArmour;Base.Bone_WindshieldArmour;Base.Scrap_WindshieldArmour;Base.Light_WindshieldArmour;Base.Heavy_WindshieldArmour,
@@ -57,10 +24,6 @@ module Base
 
         part Armour_Trunk
         {
-			model TrunkArmour
-				{
-                	file = CarNormal_Bone_TrunkArmour,
-				}
             parent = TrunkDoor,
 			area = TruckBed,
             itemType = Base.Wood_TrunkArmour;Base.Bone_TrunkArmour;Base.Scrap_TrunkArmour;Base.Light_TrunkArmour;Base.Heavy_TrunkArmour,
@@ -68,10 +31,6 @@ module Base
 
         part Armour_WindshieldRear
         {
-			model WindshieldRearArmour
-				{
-                	file = CarNormal_Bone_WindshieldRearArmour,
-				}
             parent = WindshieldRear,
 			area = TruckBed,
             itemType = Base.Wood_WindshieldArmour;Base.Bone_WindshieldArmour;Base.Scrap_WindshieldArmour;Base.Light_WindshieldArmour;Base.Heavy_WindshieldArmour,
@@ -79,10 +38,6 @@ module Base
 
         part Armour_DoorFrontLeft
         {
-			model DoorFrontLeftArmour
-				{
-                	file = CarNormal_Bone_DoorFrontLeftArmour,
-				}
             parent = DoorFrontLeft,
 			area = SeatFrontLeft,
             itemType = Base.Wood_DoorArmour;Base.Bone_DoorArmour;Base.Scrap_DoorArmour;Base.Light_DoorArmour;Base.Heavy_DoorArmour,
@@ -90,10 +45,6 @@ module Base
 
         part Armour_DoorFrontRight
         {
-			model DoorFrontRightArmour
-				{
-                	file = CarNormal_Bone_DoorFrontRightArmour,
-				}
             parent = DoorFrontRight,
 			area = SeatFrontRight,
             itemType = Base.Wood_DoorArmour;Base.Bone_DoorArmour;Base.Scrap_DoorArmour;Base.Light_DoorArmour;Base.Heavy_DoorArmour,
@@ -101,10 +52,6 @@ module Base
 
         part Armour_WindowFrontLeft
         {
-			model WindowFrontLeftArmour
-				{
-                	file = CarNormal_Bone_WindowFrontLeftArmour,
-				}
             parent = WindowFrontLeft,
 			area = SeatFrontLeft,
             itemType = Base.Wood_WindowArmour;Base.Bone_WindowArmour;Base.Scrap_WindowArmour;Base.Light_WindowArmour;Base.Heavy_WindowArmour,
@@ -112,10 +59,6 @@ module Base
 
         part Armour_WindowFrontRight
         {
-			model WindowFrontRightArmour
-				{
-                	file = CarNormal_Bone_WindowFrontRightArmour,
-				}
             parent = WindowFrontRight,
 			area = SeatFrontRight,
             itemType = Base.Wood_WindowArmour;Base.Bone_WindowArmour;Base.Scrap_WindowArmour;Base.Light_WindowArmour;Base.Heavy_WindowArmour,
@@ -123,10 +66,6 @@ module Base
 
         part Armour_DoorRearLeft
         {
-			model DoorRearLeftArmour
-				{
-                	file = CarNormal_Bone_DoorRearLeftArmour,
-				}
             parent = DoorRearLeft,
 			area = SeatRearLeft,
             itemType = Base.Wood_DoorArmour;Base.Bone_DoorArmour;Base.Scrap_DoorArmour;Base.Light_DoorArmour;Base.Heavy_DoorArmour,
@@ -134,10 +73,6 @@ module Base
 
         part Armour_DoorRearRight
         {
-			model DoorRearRightArmour
-				{
-                	file = CarNormal_Bone_DoorRearRightArmour,
-				}
             parent = DoorRearRight,
 			area = SeatRearRight,
             itemType = Base.Wood_DoorArmour;Base.Bone_DoorArmour;Base.Scrap_DoorArmour;Base.Light_DoorArmour;Base.Heavy_DoorArmour,
@@ -145,10 +80,6 @@ module Base
 
         part Armour_WindowRearLeft
         {
-			model WindowRearLeftArmour
-				{
-                	file = CarNormal_Bone_WindowRearLeftArmour,
-				}
             parent = WindowRearLeft,
 			area = SeatRearLeft,
             itemType = Base.Wood_WindowArmour;Base.Bone_WindowArmour;Base.Scrap_WindowArmour;Base.Light_WindowArmour;Base.Heavy_WindowArmour,
@@ -156,10 +87,6 @@ module Base
 
         part Armour_WindowRearRight
         {
-			model WindowRearRightArmour
-				{
-                	file = CarNormal_Bone_WindowRearRightArmour,
-				}
             parent = WindowRearRight,
 			area = SeatRearRight,
             itemType = Base.Wood_WindowArmour;Base.Bone_WindowArmour;Base.Scrap_WindowArmour;Base.Light_WindowArmour;Base.Heavy_WindowArmour,
@@ -381,11 +308,6 @@ module Base
     {
         part Storage_RoofRack
         {
-			model RoofRack
-				{
-                	file = CarNormal_Bone_RoofRack,
-                    offset = 0.0 0.0 0.0,
-				}
 			area = Roof,
             itemType = Base.Wood_RoofRack;Base.Bone_RoofRack;Base.Scrap_RoofRack;Base.Light_RoofRack;Base.Heavy_RoofRack,
         }

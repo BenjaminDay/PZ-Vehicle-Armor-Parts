@@ -15,14 +15,14 @@ Done:
 - LUA for swappable models based on the item installed (currently only 1 model is loaded)
 - Create the items and recipes for all the armour parts
 - Repair script so parts can be fixed on the go
+- LUA update the injector to use part model offsets
 
 In Progress:
+- Offsetting the part models onto the different vehicle meshes themselves
 - Modelling / texturing (I have some help thankfully from chayeeneek, seriously thank you!)
 
 
 Things still on the to do list:
-- Offsetting the part models onto the different vehicle meshes themselves
-- LUA update the injector to use part model offsets
 - Prevent some parts being uninstalled when armour is present e.g. tires if tirechains
 - Drop Tirechain in the event of a blowout
 - Sandbox settings
