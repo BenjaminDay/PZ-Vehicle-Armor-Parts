@@ -336,6 +336,7 @@ end
 local function SetArmourModelVisible(part)
     if not part then return end
     local partData = lookuptable.armourTable[part:getId()]
+    if not partData then return end
     local visuals = partData.visuals
     if not visuals then return end
 
@@ -367,23 +368,29 @@ end
 
 Vehicles.InstallComplete.Armour = function(vehicle, part)
     local partData = lookuptable.armourTable[part:getId()]
-    local protectedParts = partData.protectionData
+    if partData then
+        local protectedParts = partData.protectionData
 
-    ArmourInstallComplete(vehicle, part, protectedParts)
-    SetArmourModelVisible(part)
+        ArmourInstallComplete(vehicle, part, protectedParts)
+        SetArmourModelVisible(part)
+    end
 end
 
 Vehicles.UninstallComplete.Armour = function(vehicle, part, item)
     local partData = lookuptable.armourTable[part:getId()]
-    local protectedParts = partData.protectionData
+    if partData then
+        local protectedParts = partData.protectionData
 
-    ArmourUninstallComplete(vehicle, part, item, protectedParts)
-    SetArmourModelVisible(part)
+        ArmourUninstallComplete(vehicle, part, item, protectedParts)
+        SetArmourModelVisible(part)
+    end
 end
 
 Vehicles.Update.Armour = function(vehicle, part)
     local partData = lookuptable.armourTable[part:getId()]
-    local protectedParts = partData.protectionData
+    if partData then
+        local protectedParts = partData.protectionData
 
-    VehicleArmourUpdate(vehicle, part, protectedParts)
+        VehicleArmourUpdate(vehicle, part, protectedParts)
+    end
 end

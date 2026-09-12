@@ -18,7 +18,7 @@ Done:
 - LUA update the injector to use part model offsets
 
 In Progress:
-- Offsetting the part models onto the different vehicle meshes themselves
+- [ 75% DONE ] Offsetting the part models onto the different vehicle meshes themselves
 - Modelling / texturing (I have some help thankfully from chayeeneek, seriously thank you!)
 
 

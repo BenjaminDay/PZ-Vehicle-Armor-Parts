@@ -19,9 +19,6 @@ local function VAPDebug(message)
     end
 end
 
--- special case for roofracks as it doesnt hook on any existing part
-local RoofRack = "Storage/part/Storage_RoofRack"
-
 -- simple keyword filter check
 local function ContainsKeyword(text, keywords)
     if not text or not keywords then 
@@ -55,6 +52,29 @@ local function AddRoofArea(extents)
     return string.format("area Roof { xywh = 0.0 -0.75 %f %f, }", width, height)
 end
 
+-- retrieves the model data from table based on name of vehicle
+local function GetVehicleModelData(vehicle)
+    if not vehicle then return end
+    local modelInjectionLookup = lookuptable.modelInjectionLookup
+    local exact = modelInjectionLookup.exact[vehicle]
+    if exact then
+        return exact
+    end
+
+    local bestMatch
+    local bestLength = 0
+
+    for keyword, modelData in pairs(modelInjectionLookup.family) do
+        if #keyword > bestLength and vehicle:find(keyword, 1, true) then
+            bestMatch = modelData
+            bestLength = #keyword
+        end
+    end
+
+    return bestMatch
+end
+
+-- constructs the model {} block for a part
 local function ModelBlockConstructor(partModels)
     if not partModels then return end
 
@@ -62,16 +82,19 @@ local function ModelBlockConstructor(partModels)
     for _, data in ipairs(partModels) do
         local modelName = data[1]
         local fileName  = data[2]
-        local offsetX   = data[3]
-        local offsetY   = data[4]
-        local offsetZ   = data[5]
-        local scale     = data[6]
+        local offset    = data[3]
+        local rotate    = data[4]
+        local scale     = data[5]
+
+        if not rotate then
+            rotate = {0.0, 0.0, 0.0}
+        end
 
         -- force a single tier of model to show only
         if forceOverrideModelDEBUG then
             if ContainsKeyword(modelName, forceOMDEBUGtier) then
-                modelParams[#modelParams + 1] = string.format("    model %s\n    {\n        file = %s,\n        offset = %s %s %s,\n        scale = %s,\n    }", 
-                    modelName, fileName, offsetX, offsetY, offsetZ, scale)
+                modelParams[#modelParams + 1] = string.format("    model %s\n    {\n        file = %s,\n        offset = %s %s %s,\n        rotate = %s %s %s,\n        scale = %s,\n    }", 
+                    modelName, fileName, offset[1], offset[2], offset[3], rotate[1], rotate[2], rotate[3], scale)
             end
 
         else
@@ -79,15 +102,28 @@ local function ModelBlockConstructor(partModels)
             modelName, fileName, offsetX, offsetY, offsetZ, scale)
         end
     end
+    if #modelParams == 0 then
+        return nil
+    end
+
     return table.concat(modelParams, "\n")
 end
+
 
 -- constructs all the template and part { model } blocks for the vehicle
 local function InjectionConstructor(vehicle, script)
 
     local vehicleParams = {}
+    local vehicleModelData
+
+    -- debug option for making the offsets on vehicles
+    if forceOverrideModelDEBUG and forceOMDEBUGvehicle then
+        vehicleModelData = GetVehicleModelData(forceOMDEBUGvehicle)
+    else
+        vehicleModelData = GetVehicleModelData(vehicle)
+    end
+
     for part, partData in pairs(lookuptable.armourTable) do
-        VAPDebug("Part: " .. part)
 
         -- if vehicle has part to hook armour on then
         if partData.source then
@@ -105,40 +141,29 @@ local function InjectionConstructor(vehicle, script)
                     -- roofrack area injection for hitbox interaction
                     if part == "Storage_RoofRack" then
                         local roofAreaParam = AddRoofArea(script:getExtents())
-                        vehicleParams[#vehicleParams + 1] = roofAreaParam
+                        if roofAreaParam then
+                            vehicleParams[#vehicleParams + 1] = roofAreaParam
+                        end
                     end
             end
         end
-        
-        -- debug option for making the offsets on vehicles
-        if forceOverrideModelDEBUG then
-            -- if vehicle has model Support
-            local vehiclePartModelData = lookuptable.modelInjectionLookup[forceOMDEBUGvehicle]
-            if vehiclePartModelData then
-                local partModels = vehiclePartModelData[part]
-                if partModels then
-                    -- create the model blocks for the part types
-                    local modelParams = ModelBlockConstructor(partModels)
 
-                    -- create a part block for the vehicle
-                    vehicleParams[#vehicleParams + 1]  = string.format("part %s\n{\n%s\n}\n", part, modelParams)
-                end
-            end
+        -- if vehicle has model Support
+        if vehicleModelData then
+            local partModels = vehicleModelData[part]
+            if partModels then
+                -- create the model blocks for the part types
+                local modelParams = ModelBlockConstructor(partModels)
 
-        else
-            -- if vehicle has model Support
-            local vehiclePartModelData = lookuptable.modelInjectionLookup[vehicle]
-            if vehiclePartModelData then
-                local partModels = vehiclePartModelData[part]
-                if partModels then
-                    -- create the model blocks for the part types
-                    local modelParams = ModelBlockConstructor(partModels)
-
-                    -- create a part block for the vehicle
+                -- create a part block for the vehicle
+                if modelParams then
                     vehicleParams[#vehicleParams + 1]  = string.format("part %s\n{\n%s\n}\n", part, modelParams)
                 end
             end
         end
+    end
+    if #vehicleParams == 0 then
+        return nil
     end
 
     return table.concat(vehicleParams, "\n")
@@ -156,8 +181,10 @@ if getScriptManager() then
 
             -- construct the string to inject into the vehicle script
             local params = InjectionConstructor(vehicle, script)
-            print("[VAP] Script injection for" .. vehicle .. "complete!")
-            DoVehicleParam(vehicle, params)
+            if params then
+                DoVehicleParam(vehicle, params)
+                print("[VAP] Script injection for " .. vehicle .. " complete!")
+            end
         end
     end
 end
